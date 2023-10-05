@@ -6,8 +6,6 @@ main {
     background-image: url("/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/public/images/background-leesin.jpg"); /* Add your own image URL */
     background-size: cover;
   }
-  
-  /* Style the entry list */
   .entry-list {
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
