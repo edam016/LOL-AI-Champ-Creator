@@ -3,14 +3,14 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-image: url('/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/public/images/background-leesin.jpg'); /* Add your own image URL */
+    background-image: url("/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/public/images/background-leesin.jpg"); /* Add your own image URL */
     background-size: cover;
   }
   
   /* Style the entry list */
   .entry-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
   }
   
@@ -26,6 +26,7 @@ main {
     text-align: center;
     transition: transform 0.2s ease;
     cursor: pointer;
+    width: 100%;
   }
   
   .entry:hover {
