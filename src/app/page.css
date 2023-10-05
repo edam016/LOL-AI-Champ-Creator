@@ -1,0 +1,73 @@
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/public/images/background-leesin.jpg'); /* Add your own image URL */
+    background-size: cover;
+  }
+  
+  /* Style the entry list */
+  .entry-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Style individual entries */
+  .entry {
+    background-color: rgba(255, 255, 255, 0.9); /* Add transparency to the background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'LeagueFont', Arial, sans-serif; /* Use the League of Legends font or a similar one */
+    color: #333;
+    text-align: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .entry:hover {
+    transform: scale(1.02); /* Add a hover effect to enlarge the entry */
+  }
+  
+  .entry h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #333; /* Adjust text color */
+  }
+  
+  .entry p {
+    font-size: 16px;
+    color: #333; /* Adjust text color */
+  }
+  
+  /* Style action buttons */
+  .entry-actions {
+    margin-top: 10px;
+  }
+  
+  .entry-action {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .entry-action:hover {
+    background-color: #2980b9;
+  }
+  
+  @font-face {
+    font-family: 'LeagueFont';
+    src: url('./fonts/BeaufortforLOL-Medium.woff') format('woff'); /* Adjust the format and path */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
