@@ -1,0 +1,54 @@
+/* Navbar.css */
+
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    background-color: #1a1a1a; /* League of Legends black background */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Fix the navbar position */
+    top: 0; /* Position at the top of the viewport */
+    right: 0; /* Position at the top right side */
+    width: 100%; /* Take the full width of the viewport */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the League of Legends logo */
+  .navbar .logo img {
+    width: 100px; /* Adjust the logo size as needed */
+  }
+  
+  /* Style the navigation links */
+  .navbar .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff; /* White link text color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #ffd700; /* League of Legends yellow on hover */
+  }
+  
+  /* Style the Champ Creator text */
+  .champ-creator {
+    flex-grow: 1; /* Expand to fill the available space */
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
