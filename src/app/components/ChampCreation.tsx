@@ -33,14 +33,9 @@ export default function ChampCreation() {
     "Enter E Ability Description",
     "Enter R Ability Description",
   ];
-  function handleNextClick() {
-    // Update the current question index to move to the next question
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-    // Optionally, you can clear the input field for the next question
-    setChampionInput("");
-  }
 
-  async function onSubmit(event: { preventDefault: () => void; }) {
+
+  async function submitData(event: { preventDefault: () => void; }) {
     event.preventDefault();
     try {
       const response = await fetch("/api/generate", {
@@ -48,7 +43,7 @@ export default function ChampCreation() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ champion: championInput }),
+        body: JSON.stringify({ champion: championProfile }),
       });
 
       const data = await response.json();
@@ -58,11 +53,16 @@ export default function ChampCreation() {
 
       setResult(data.result);
       setChampionInput("");
+    } catch(error) {
+      // Consider implementing your own error handling logic here
+      console.error(error);
+    }
+  }
 
-      // Move to the next question
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+  async function handleNextClick(event: { preventDefault: () => void; }) {
+    event.preventDefault();
+    try{
 
-      // Update the championProfile state based on the current question index
       const currentQuestion = questions[currentQuestionIndex];
 
       if (currentQuestion === "Enter thematic words associated with your Champion") {
@@ -175,7 +175,7 @@ export default function ChampCreation() {
         {currentQuestionIndex < questions.length ? (
           <div>
             <h3>{questions[currentQuestionIndex]}</h3>
-            <form onSubmit={onSubmit}>
+            <form>
               <input
                 type="text"
                 name="champion"
@@ -183,13 +183,14 @@ export default function ChampCreation() {
                 value={championInput}
                 onChange={(e) => setChampionInput(e.target.value)}
               />
-              <button className="next-button" onClick={handleNextClick}>Next</button>
+              <input type="submit" value="Next" className="next-button" onClick={handleNextClick} />
             </form>
           </div>
         ) : (
           <div className={styles.result}>
             <pre>{JSON.stringify(championProfile, null, 2)}</pre>
             {result}
+            <input type="submit" className="next-button" onClick={submitData} />
           </div>
         )}
       </main>
