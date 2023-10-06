@@ -3,7 +3,6 @@
 /* Riot Games-style button */
 .riot-button {
   display: flex;
-  color: white;
   text-align: center;
   text-decoration: none;
   justify-content: center;
@@ -16,9 +15,10 @@
   background-size: contain;
   transition: background-image 0.1s linear; /* Add a transition effect */
   background-repeat: no-repeat;
-  height: 200px;
+  height: 189px;
   width: 400px;
-  box-sizing:border-box
+  box-sizing:border-box;
+  border: 3px solid #111;
 }
 
 .riot-button:hover {
