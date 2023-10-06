@@ -2,21 +2,28 @@
 
 /* Riot Games-style button */
 .riot-button {
-  background-color: #c9302c;
+  display: flex;
   color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 2vw 4vw; /* Use vw units for padding to scale with window size */
   text-align: center;
   text-decoration: none;
-  margin: 0 auto;
-  margin-top: 5vh; /* Use vh units for margin to scale with window size */
-  font-size: 2vw; /* Use vw units for font size to scale with window size */
+  justify-content: center;
+  font-family: 'Gabarito';
+  font-size: 30px;
+  color: black;
+  align-items: center;
   cursor: pointer;
+  background-image: url('../assets/graphics/cta-lol-blank.png');
+  background-size: contain;
+  transition: background-image 0.1s linear; /* Add a transition effect */
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 400px;
+  box-sizing:border-box
 }
 
 .riot-button:hover {
-  background-color: rgba(17, 17, 17, 0.6);
+  background-image: url('../assets/graphics/cta-lol-blank-hover.png');
+  transform: scale(1.1);
 }
 
 /* Styles for the large window */

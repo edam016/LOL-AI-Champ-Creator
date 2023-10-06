@@ -67,6 +67,14 @@ main {
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Gabarito';
+    src: url('./fonts/Gabarito-SemiBold.ttf') format('truetype'); /* Use 'truetype' format for TTF fonts */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
   
   video{
     width: 100%;
@@ -87,7 +95,7 @@ main {
   body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url('./assets/images/ziggs-bg.png');
+    background-image: url('./assets/images/ziggs-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;

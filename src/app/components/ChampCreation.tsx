@@ -59,6 +59,11 @@ export default function ChampCreation() {
     }
   }
 
+  const handleBackClick = () => {
+    setChampionInput("");
+    setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+  };
+
   async function handleNextClick(event: { preventDefault: () => void; }) {
     event.preventDefault();
     try{
@@ -183,7 +188,10 @@ export default function ChampCreation() {
                 value={championInput}
                 onChange={(e) => setChampionInput(e.target.value)}
               />
-              <input type="submit" value="Next" className="next-button" onClick={handleNextClick} />
+              <div className="question-navigation">
+              <input type="button" value="Next" className="next-button" onClick={handleNextClick} />
+              <input type="button" value="Back" className="next-button" onClick={handleBackClick} />
+              </div>
             </form>
           </div>
         ) : (
