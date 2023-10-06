@@ -6,25 +6,26 @@ import CloseIcon from '@mui/icons-material/Close';
 const Start = () => {
   const [isStarted, setIsStarted] = useState(false);
 
-  const openWindow = () => {
+  const start = () => {
     setIsStarted(true);
-  };
-
-  const closeWindow = () => {
-    setIsStarted(false);
   };
 
   return (
     <div>
         {isStarted 
         ?  <ChampCreation /> :
-        <div>
+        <div className='rules-text'>
           <div>
-          <p>
+          <h6>
             League of Legends AI Champ Creator
+          </h6>
+          <p className='text'>
+            As a huge fan of League of Legends and also tech, I present an <b>AI League of Legends AI Champion Concept Creator</b>
+            Answer questions regarding your champion with only the first prompt with tags being mandatory. All the fields after
+            are optional and up to your creative liberties. Happy Creating on the rift!
           </p>
           </div>
-          <button className='start-button'>
+          <button className='start-button' onClick={start}>
             Im ready
           </button>
         </div>

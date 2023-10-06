@@ -1,10 +1,42 @@
 /* Riot Games-style button */
-.start-button {
+.riot-button {
     padding: 12px 50px;
     color: #fff;
-    background-color: #d9534f;
+    background-color: #333;
     border: none;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+  }
+
+  /* Riot Games-style button */
+.start-button {
+    padding: 12px 50px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    justify-self: center;
+    margin: auto;
+  }
+
+  h6{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+
+  .rules-text{
+    color: #fff;
+    font-family: 'LeagueFont';
+    background-color: rgba(17, 17, 17, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+  .text{
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
