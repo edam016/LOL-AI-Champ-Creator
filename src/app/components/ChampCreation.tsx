@@ -188,9 +188,9 @@ export default function ChampCreation() {
                 value={championInput}
                 onChange={(e) => setChampionInput(e.target.value)}
               />
-              <div className="question-navigation">
-              <input type="button" value="Next" className="next-button" onClick={handleNextClick} />
+              <div className="question-navigation" style={{ width: "100%", margin: "auto", display: "flex", justifyContent: "space-between" }}>
               <input type="button" value="Back" className="next-button" onClick={handleBackClick} />
+              <input type="button" value="Next" className="next-button" onClick={handleNextClick} />
               </div>
             </form>
           </div>

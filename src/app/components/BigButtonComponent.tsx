@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './BigButtonComponent.css'; // Import your CSS file
-import ChampCreation from './ChampCreation';
-import buttonSrc from '../assets/graphics/lol-cta-hero.png';
-import Image from 'next/image'; 
-import cta from '../assets/graphics/highdef-lol-cta.png';
-import ctaHover from '../assets/graphics/hover-hero-cta.png';
+import Start from './Start';
+import CloseIcon from '@mui/icons-material/Close';
 
 const BigButtonComponent = () => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
@@ -29,9 +26,9 @@ const BigButtonComponent = () => {
 
       {isWindowOpen && (
         <div className="big-window">
-          <ChampCreation />
+          <Start/>
           <button className="close-button" onClick={closeWindow}>
-            Close Window
+            <CloseIcon fontSize='large' />
           </button>
         </div>
       )}

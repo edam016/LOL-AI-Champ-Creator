@@ -75,17 +75,15 @@
   }
 
   .main input[type="submit"]:hover {
-    background-color: black;
+    background-color: #24D4EF;
     color: white;
   }
 
   .question-navigation{
     display: flex;
-    justify-content: space-between;
   }
   
   .main input[type="button"] {
-    display: flex;
     padding: 12px 50px;
     color: #fff;
     background-color: #d9534f;
@@ -93,4 +91,9 @@
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+  }
+
+    
+  .main input[type="button"]:hover {
+    background-color: rgba(17, 17, 17);
   }
