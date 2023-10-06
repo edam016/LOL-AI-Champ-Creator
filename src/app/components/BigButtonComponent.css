@@ -2,55 +2,62 @@
 
 /* Riot Games-style button */
 .riot-button {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: block; /* Change to "block" to center it */
-    margin: 0 auto; /* Center horizontally */
-    margin-top: 200px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .riot-button:hover {
-    background-color: #c9302c;
-  }
-  
-  /* Styles for the large window */
-  .big-window {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #111;
-    border: 1px solid #ccc;
-    padding: 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-  }
-  
-  /* Close button inside the window */
-  .close-button {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    background-color: #c9302c;
-  }
-  
+  background-color: #c9302c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2vw 4vw; /* Use vw units for padding to scale with window size */
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5vh; /* Use vh units for margin to scale with window size */
+  font-size: 2vw; /* Use vw units for font size to scale with window size */
+  cursor: pointer;
+}
+
+.riot-button:hover {
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+/* Styles for the large window */
+.big-window {
+  position: fixed;
+  top: 50%;
+  border-radius: 2vw; /* Use vw units for border radius to scale with window size */
+  left: 0%;
+  transform: translate(0, -50%);
+  background-color: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(1vw); /* Use vw units for blur effect to scale with window size */
+  border: 1px solid #ccc;
+  padding: 2vw; /* Use vw units for padding to scale with window size */
+  margin: 2vh 2vw; /* Use vw and vh units for margin to scale with window size */
+  height: 80vh;
+  width: 40vw;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  max-height: 80vh; /* Limit the maximum height to the viewport height */
+  transition: left 0.3s;
+}
+
+/* Close button inside the window */
+.close-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1vw 2vw; /* Use vw units for padding to scale with window size */
+  text-align: center;
+  text-decoration: none;
+  font-size: 1vw; /* Use vw units for font size to scale with window size */
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: rgba(17, 17, 17);
+}

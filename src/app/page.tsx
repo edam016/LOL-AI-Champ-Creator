@@ -6,15 +6,17 @@ import './page.css';
 import Navbar from './components/Navbar';
 import ChampCreation from './components/ChampCreation';
 import BigButtonComponent from './components/BigButtonComponent';
-import videoSrc from './assets/video/worlds2023video.mp4';
+import videoSrc from './assets/video/test.mp4';
 
 
 function Page() {
   return (
     <div className="App bg">
-      <video src={videoSrc} autoPlay loop controls/>
-      <Navbar />
-      <BigButtonComponent />
+      <video src={videoSrc} autoPlay loop/>
+      <div className='content'>
+        <Navbar />
+        <BigButtonComponent />
+      </div>
     </div>
   );
 }

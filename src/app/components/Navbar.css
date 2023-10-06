@@ -10,10 +10,11 @@ body, h1, p {
   .navbar {
     background-color: #1a1a1a; /* League of Legends black background */
     color: #fff; /* White text color */
+    font-family: 'LeagueFont', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 30px 20px;
     position: fixed; /* Fix the navbar position */
     top: 0; /* Position at the top of the viewport */
     right: 0; /* Position at the top right side */
@@ -49,6 +50,6 @@ body, h1, p {
     flex-grow: 1; /* Expand to fill the available space */
     text-align: center; /* Center the text horizontally */
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
   }
   

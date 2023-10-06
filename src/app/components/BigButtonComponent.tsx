@@ -13,11 +13,13 @@ const BigButtonComponent = () => {
     setIsWindowOpen(false);
   };
 
+
   return (
     <div>
-      <button className="riot-button" onClick={openWindow}>
+      {isWindowOpen ? <span /> : <button className="riot-button" onClick={openWindow}>
         Create Champion
-      </button>
+      </button>}
+
       {isWindowOpen && (
         <div className="big-window">
           <ChampCreation />

@@ -3,12 +3,12 @@
 module.exports = {
     // Next.js specific configurations
   
-    webpack: (config, { isServer }) => {
+    webpack: (config) => {
       // Webpack configurations can be added here
   
       // For example, to handle .mp4 files using file-loader
       config.module.rules.push({
-        test: /\.(mp4)$/,
+        test: /\.(mp4)$/, // Use this regex pattern to match .mp4 files
         use: {
           loader: 'file-loader',
           options: {
@@ -17,8 +17,6 @@ module.exports = {
           },
         },
       });
-  
-      // ... other Webpack configurations
   
       return config;
     },
