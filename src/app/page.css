@@ -87,7 +87,7 @@ main {
   body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url('./assets/images/azir-bg.png');
+    background-image: url('./assets/images/ziggs-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;

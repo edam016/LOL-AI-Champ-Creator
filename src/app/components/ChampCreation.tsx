@@ -4,7 +4,41 @@ import styles from "./ChampCreation.module.css";
 
 export default function ChampCreation() {
   const [championInput, setChampionInput] = useState("");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState("");
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [championProfile, setChampionProfile] = useState({
+    champion: {
+      name: "",
+      tags: "",
+      lore: "",
+      location: "",
+      abilities: {
+        passive: "",
+        qAbility: "",
+        wAbility: "",
+        eAbility: "",
+        rAbility: ""
+      }
+    }
+  });
+
+  const questions = [
+    "Enter thematic words associated with your Champion",
+    "Enter the Name of the Champion",
+    "Enter a small passage for lore",
+    "Enter tags related to your new Champion's location",
+    "Enter Passive Ability Description",
+    "Enter Q Ability Description",
+    "Enter W Ability Description",
+    "Enter E Ability Description",
+    "Enter R Ability Description",
+  ];
+  function handleNextClick() {
+    // Update the current question index to move to the next question
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    // Optionally, you can clear the input field for the next question
+    setChampionInput("");
+  }
 
   async function onSubmit(event: { preventDefault: () => void; }) {
     event.preventDefault();
@@ -24,7 +58,107 @@ export default function ChampCreation() {
 
       setResult(data.result);
       setChampionInput("");
-    } catch(error) {
+
+      // Move to the next question
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+
+      // Update the championProfile state based on the current question index
+      const currentQuestion = questions[currentQuestionIndex];
+
+      if (currentQuestion === "Enter thematic words associated with your Champion") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            tags: championInput,
+          },
+        }));
+      } else if (currentQuestion === "Enter the Name of the Champion") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            name: championInput,
+          },
+        }));
+      } else if (currentQuestion === "Enter a small passage for lore") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            lore: championInput,
+          },
+        }));
+      } else if (currentQuestion === "Enter tags related to your new Champion's location") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            location: championInput,
+          },
+        }));
+      } else if (currentQuestion === "Enter Passive Ability Description") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            abilities: {
+              ...prevProfile.champion.abilities,
+              passive: championInput,
+            },
+          },
+        }));
+      } else if (currentQuestion === "Enter Q Ability Description") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            abilities: {
+              ...prevProfile.champion.abilities,
+              qAbility: championInput,
+            },
+          },
+        }));
+      } else if (currentQuestion === "Enter W Ability Description") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            abilities: {
+              ...prevProfile.champion.abilities,
+              wAbility: championInput,
+            },
+          },
+        }));
+      } else if (currentQuestion === "Enter E Ability Description") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            abilities: {
+              ...prevProfile.champion.abilities,
+              eAbility: championInput,
+            },
+          },
+        }));
+      } else if (currentQuestion === "Enter R Ability Description") {
+        setChampionProfile((prevProfile) => ({
+          ...prevProfile,
+          champion: {
+            ...prevProfile.champion,
+            abilities: {
+              ...prevProfile.champion.abilities,
+              rAbility: championInput,
+            },
+          },
+        }));
+      }
+            // Clear the input field
+            setChampionInput("");
+
+            // Move to the next question
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    } catch (error) {
       // Consider implementing your own error handling logic here
       console.error(error);
     }
@@ -38,32 +172,26 @@ export default function ChampCreation() {
       </Head>
 
       <main className={styles.main}>
-        <h3>Enter key words seperated by a comma</h3>
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="location"
-            placeholder="Enter tags related to your new Champions location"
-            value={championInput}
-            onChange={(e) => setChampionInput(e.target.value)}
-          />
-        <input
-            type="text"
-            name="tags"
-            placeholder="Enter thematic words associated to your Champion"
-            value={championInput}
-            onChange={(e) => setChampionInput(e.target.value)}
-          />
-        <input
-            type="text"
-            name="champion"
-            placeholder="Enter tags related to your new Chamption"
-            value={championInput}
-            onChange={(e) => setChampionInput(e.target.value)}
-          />
-          <input type="submit" value="Generate names" />
-        </form>
-        <div className={styles.result}>{result}</div>
+        {currentQuestionIndex < questions.length ? (
+          <div>
+            <h3>{questions[currentQuestionIndex]}</h3>
+            <form onSubmit={onSubmit}>
+              <input
+                type="text"
+                name="champion"
+                placeholder="Your answer"
+                value={championInput}
+                onChange={(e) => setChampionInput(e.target.value)}
+              />
+              <button className="next-button" onClick={handleNextClick}>Next</button>
+            </form>
+          </div>
+        ) : (
+          <div className={styles.result}>
+            <pre>{JSON.stringify(championProfile, null, 2)}</pre>
+            {result}
+          </div>
+        )}
       </main>
     </div>
   );

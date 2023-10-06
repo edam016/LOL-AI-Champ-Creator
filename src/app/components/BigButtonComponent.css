@@ -9,7 +9,6 @@
   padding: 2vw 4vw; /* Use vw units for padding to scale with window size */
   text-align: center;
   text-decoration: none;
-  display: block;
   margin: 0 auto;
   margin-top: 5vh; /* Use vh units for margin to scale with window size */
   font-size: 2vw; /* Use vw units for font size to scale with window size */
@@ -25,7 +24,7 @@
   position: fixed;
   top: 50%;
   border-radius: 2vw; /* Use vw units for border radius to scale with window size */
-  left: 0%;
+  left: 0; /* Move the window to the right edge of the screen */
   transform: translate(0, -50%);
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(1vw); /* Use vw units for blur effect to scale with window size */
@@ -42,16 +41,19 @@
   justify-content: center;
   overflow-y: auto; /* Add vertical scrollbar if content overflows */
   max-height: 80vh; /* Limit the maximum height to the viewport height */
-  transition: left 0.3s;
+  transition: right 0.3s; /* Adjust transition property to "right" */
 }
 
 /* Close button inside the window */
 .close-button {
+  position: absolute; /* Position the button absolutely within the window */
+  top: 1vw; /* Adjust top value to position the button at the top */
+  right: 1vw; /* Adjust right value to position the button at the right */
   background-color: #d9534f;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 1vw 2vw; /* Use vw units for padding to scale with window size */
+  padding: 10px; /* Use vw units for padding to scale with window size */
   text-align: center;
   text-decoration: none;
   font-size: 1vw; /* Use vw units for font size to scale with window size */
