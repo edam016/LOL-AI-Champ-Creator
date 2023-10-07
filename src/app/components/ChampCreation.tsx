@@ -31,7 +31,7 @@ export default function ChampCreation() {
     "⚡ Unleash the potential of your champion's passive ability with a compelling description",
     "🔴 Describe the powerful Q ability that sets your champion apart",
     "🔵 Master the intricacies of the W ability with a detailed description",
-    "⚫ Dive into the world of the E ability and define its uniqueness",
+    "⚫ Create a shifty E ability and define its uniqueness",
     "🌀 Shape the ultimate R ability with an awe-inspiring description",
   ];
 
@@ -136,7 +136,7 @@ export default function ChampCreation() {
             },
           },
         }));
-      } else if (currentQuestion ===  "⚫ Dive into the world of the E ability and define its uniqueness") {
+      } else if (currentQuestion ===  "⚫ Create a shifty E ability and define its uniqueness") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -165,7 +165,6 @@ export default function ChampCreation() {
             // Move to the next question
             setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } catch (error) {
-      // Consider implementing your own error handling logic here
       console.error(error);
     }
   }
@@ -206,9 +205,9 @@ export default function ChampCreation() {
             <pre>{JSON.stringify(championProfile, null, 2)}</pre>
             {result}
             <div  onClick={submitData}>
-            <button className="button-process">
-            Create Champion
-            <div className="button__horizontal"></div>
+              <button className="button-process">
+              Create Champion
+              <div className="button__horizontal"></div>
             <div className="button__vertical"></div>
           </button>
         </div>
