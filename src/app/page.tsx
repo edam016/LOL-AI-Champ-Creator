@@ -12,6 +12,7 @@ import videoSrc from './assets/video/test.mp4';
 function Page() {
   return (
     <div className="App bg">
+      <link rel="preload" href="src/app/assets/images/splash/ziggs-bg.jpg" as="image"></link>
       <video src={videoSrc} autoPlay loop/>
       <div className='content'>
         <Navbar />

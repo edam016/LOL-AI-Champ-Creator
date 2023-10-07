@@ -95,7 +95,7 @@ main {
   body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url('./assets/images/background/ziggs-bg.jpg');
+    background-image: url('./assets/images/splash/ziggs-bg.jpg');
     /* animation: changeBG 60s infinite ease-in-out;
     animation-fill-mode: forwards; */
     background-size: cover;
