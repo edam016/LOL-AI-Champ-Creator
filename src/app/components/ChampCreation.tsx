@@ -70,7 +70,7 @@ export default function ChampCreation() {
 
       const currentQuestion = questions[currentQuestionIndex];
 
-      if (currentQuestion === "Enter thematic words associated with your Champion") {
+      if (currentQuestion === "🌟 Enhance the essence of your champion with thematic words describing their nature (Seperate words with comma)") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -78,7 +78,7 @@ export default function ChampCreation() {
             tags: championInput,
           },
         }));
-      } else if (currentQuestion === "Enter the Name of the Champion") {
+      } else if (currentQuestion === "📛 Reveal the champion's true identity by giving them a name") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -86,7 +86,7 @@ export default function ChampCreation() {
             name: championInput,
           },
         }));
-      } else if (currentQuestion === "Enter a small passage for lore") {
+      } else if (currentQuestion === "📜 Craft a captivating lore passage that breathes life into your creation") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -94,7 +94,7 @@ export default function ChampCreation() {
             lore: championInput,
           },
         }));
-      } else if (currentQuestion === "Enter tags related to your new Champion's location") {
+      } else if (currentQuestion === "🌍 Dive into the champion's origins by exploring their unique location.") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -102,7 +102,7 @@ export default function ChampCreation() {
             location: championInput,
           },
         }));
-      } else if (currentQuestion === "Enter Passive Ability Description") {
+      } else if (currentQuestion === "⚡ Unleash the potential of your champion's passive ability with a compelling description") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -113,7 +113,7 @@ export default function ChampCreation() {
             },
           },
         }));
-      } else if (currentQuestion === "Enter Q Ability Description") {
+      } else if (currentQuestion === "🔴 Describe the powerful Q ability that sets your champion apart") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -124,7 +124,7 @@ export default function ChampCreation() {
             },
           },
         }));
-      } else if (currentQuestion === "Enter W Ability Description") {
+      } else if (currentQuestion === "🔵 Master the intricacies of the W ability with a detailed description") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -135,7 +135,7 @@ export default function ChampCreation() {
             },
           },
         }));
-      } else if (currentQuestion === "Enter E Ability Description") {
+      } else if (currentQuestion ===  "⚫ Dive into the world of the E ability and define its uniqueness") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {
@@ -146,7 +146,7 @@ export default function ChampCreation() {
             },
           },
         }));
-      } else if (currentQuestion === "Enter R Ability Description") {
+      } else if (currentQuestion === "🌀 Shape the ultimate R ability with an awe-inspiring description") {
         setChampionProfile((prevProfile) => ({
           ...prevProfile,
           champion: {

@@ -15,7 +15,7 @@
   background-size: contain;
   transition: background-image 0.1s linear; /* Add a transition effect */
   background-repeat: no-repeat;
-  height: 189px;
+  height: 186px;
   width: 400px;
   box-sizing:border-box;
   border: 3px solid #111;
@@ -29,12 +29,10 @@
 /* Styles for the large window */
 .big-window {
   position: flex;
-  border-radius: 2vw; /* Use vw units for border radius to scale with window size */
   background-color: rgba(17, 17, 17, 0.6);
   backdrop-filter: blur(1vw); /* Use vw units for blur effect to scale with window size */
-  border: 1px solid #ccc;
-  padding: 10vh; /* Use vw units for padding to scale with window size */
-  margin-top: 10vh; /* Use vw and vh units for margin to scale with window size */
+  border: 2px solid #F1CE72;/* Use vw units for padding to scale with window size */
+  margin-top: 8vh; /* Use vw and vh units for margin to scale with window size */
   height: 90vh;
   width: 80vw;
   z-index: 1000;
@@ -43,8 +41,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: hidden; /* Add vertical scrollbar if content overflows */
-  max-height: 800px; /* Limit the maximum height to the viewport height */
+  overflow-y:auto; /* Add vertical scrollbar if content overflows */
+  max-height: 90vh; /* Limit the maximum height to the viewport height */
   transition: right 0.3s; /* Adjust transition property to "right" */
 }
 

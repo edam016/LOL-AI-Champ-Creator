@@ -20,6 +20,8 @@ body, h1, p {
     right: 0; /* Position at the top right side */
     width: 100%; /* Take the full width of the viewport */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #F1CE72;
+    border-top: 3px solid #F1CE72;
   }
   
   /* Style the League of Legends logo */

@@ -15,7 +15,7 @@ export default async function (req, res) {
     return;
   }
 
-  const champion = req.body.champion || '';
+  const animal = req.body.animal || '';
   if (animal.trim().length === 0) {
     res.status(400).json({
       error: {
@@ -48,7 +48,7 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(champion) {
+function generatePrompt(animal) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
   return `Suggest three names for an animal that is a superhero.
