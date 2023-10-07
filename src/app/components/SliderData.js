@@ -1,0 +1,22 @@
+export const SliderData = [
+    {
+      image:
+        '/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/src/app/assets/images/splash/poolparty.jpg'
+    },
+    {
+      image:
+        '/src/app/assets/images/splash/ezreal-splash.jpg'
+    },
+    {
+      image:
+        '/Users/pacpl/Desktop/LOL-Champ-Creator/lol-champ-creator/src/app/assets/images/splash/poolparty.jpg'
+    },
+    {
+      image:
+        '/src/app/assets/images/splash/jax.jpg'
+    },
+    {
+      image:
+        '/src/app/assets/images/splash/tahmkench-splash.jpg'
+    }
+  ];
