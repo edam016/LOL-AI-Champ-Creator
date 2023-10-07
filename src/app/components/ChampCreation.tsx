@@ -23,15 +23,15 @@ export default function ChampCreation() {
   });
 
   const questions = [
-    "Enter thematic words associated with your Champion",
-    "Enter the Name of the Champion",
-    "Enter a small passage for lore",
-    "Enter tags related to your new Champion's location",
-    "Enter Passive Ability Description",
-    "Enter Q Ability Description",
-    "Enter W Ability Description",
-    "Enter E Ability Description",
-    "Enter R Ability Description",
+    "🌟 Enhance the essence of your champion with thematic words describing their nature (Seperate words with comma)",
+    "📛 Reveal the champion's true identity by giving them a name",
+    "📜 Craft a captivating lore passage that breathes life into your creation",
+    "🌍 Dive into the champion's origins by exploring their unique location.",
+    "⚡ Unleash the potential of your champion's passive ability with a compelling description",
+    "🔴 Describe the powerful Q ability that sets your champion apart",
+    "🔵 Master the intricacies of the W ability with a detailed description",
+    "⚫ Dive into the world of the E ability and define its uniqueness",
+    "🌀 Shape the ultimate R ability with an awe-inspiring description",
   ];
 
 
@@ -189,7 +189,7 @@ export default function ChampCreation() {
                 onChange={(e) => setChampionInput(e.target.value)}
               />
               <div className="question-navigation" style={{ width: "100%", margin: "auto", display: "flex", justifyContent: "space-between" }}>
-              <input type="button" value="Back" className="next-button" onClick={handleBackClick} />
+              {currentQuestionIndex > 0 ? <input type="button" value="Back" className="next-button" onClick={handleBackClick}/> :<div/>}
               <input type="button" value="Next" className="next-button" onClick={handleNextClick} />
               </div>
             </form>

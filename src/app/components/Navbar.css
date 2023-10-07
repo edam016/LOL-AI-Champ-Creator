@@ -14,7 +14,7 @@ body, h1, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px;
+    padding: 1vh;
     position: fixed; /* Fix the navbar position */
     top: 0; /* Position at the top of the viewport */
     right: 0; /* Position at the top right side */
@@ -50,6 +50,6 @@ body, h1, p {
     flex-grow: 1; /* Expand to fill the available space */
     text-align: center; /* Center the text horizontally */
     font-weight: bold;
-    font-size: 30px;
+    font-size: 3vh;
   }
   

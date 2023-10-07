@@ -27,23 +27,20 @@
     background-color: #111;
   }
 
-  h6{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 40px;
+  h3{
+    font-size: 30px;
   }
 
   .rules-text{
     color: #fff;
+    margin: 2vh 4vw;
+    padding: 1vh 2vw; 
     font-family: 'LeagueFont';
-    border-radius: 20px;
-    padding: 30px;
 }
 
-  .text{
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+.text{
+    margin-bottom: 5vh;
+}
 
   .slider {
     position: relative;

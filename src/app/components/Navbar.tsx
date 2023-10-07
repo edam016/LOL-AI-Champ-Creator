@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           <li><a href="#">Create</a></li>
         </ul>
       </div> */}
-      <div className="champ-creator">League of Legends Champ Creator</div>
+      <div className="champ-creator">League of Legends AI Champ Creator</div>
     </nav>
   );
 };
