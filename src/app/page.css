@@ -96,8 +96,29 @@ main {
     overflow-x: hidden;
     overflow-y: hidden;
     background-image: url('./assets/images/background/ziggs-bg.jpg');
+    animation: changeBG 60s infinite ease-in-out;
+    animation-fill-mode: forwards;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 2s;
     height: 100vh;
     width: 100%;
+  }
+
+  @keyframes changeBG {
+    20%{
+      background-image: url('./assets/images/splash/ezreal-splash.jpg');
+    }
+    40%{
+      background-image: url('./assets/images/splash/kogmaw-lulu-splash.jpg');
+    }
+    60%{
+      background-image: url('./assets/images/splash/poolparty.jpg');
+    }
+    80%{
+      background-image: url('./assets/images/splash/zed-splash.jpg');
+    }
+    100%{
+      background-image: url('./assets/images/splash/tahmkench-splash.jpg');
+    }
   }
