@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './BigButtonComponent.css'; // Import your CSS file
 import Start from './Start';
 import CloseIcon from '@mui/icons-material/Close';
+import './hoverbutton-gold.css';
 
 const BigButtonComponent = () => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
@@ -20,7 +21,11 @@ const BigButtonComponent = () => {
         <span />
       ) : (
         <div className="riot-button" onClick={openWindow}>
-          Create Champion
+            <button className="button-hero start-button">
+            Create Champion
+            <div className="button__horizontal"></div>
+            <div className="button__vertical"></div>
+          </button>
         </div>
       )}
 

@@ -4,6 +4,7 @@ import './Start.css';
 import CloseIcon from '@mui/icons-material/Close';
 import Carousel from './Carousel';
 import { SliderData } from './SliderData';
+import './hoverbutton.css';
 
 
 const Start = () => {
@@ -31,20 +32,20 @@ Greetings, fellow summoners! I'm excited to introduce the new <u><b>AI League of
 <br/>
 📖 Patch Notes:
 <br />
-As dedicated fans of League of Legends and technology, we're thrilled to bring you this new tool. It's designed to help you craft your dream champion and breathe life into your unique ideas. You'll start with the first prompt, which focuses on tags, and from there, the possibilities are endless. Feel free to explore and unleash your imagination as you design your champion's lore, abilities, and more!
+As a dedicated fan of League of Legends and technology, I'm thrilled to bring you this new tool. It's designed to help you craft your dream champion and breathe life into your unique ideas. You'll start with the first prompt, which focuses on tags, and from there, the possibilities are endless. Feel free to explore and unleash your imagination as you design your champion's lore, abilities, and more!
 <br /><br/>
 🎮 Ready to embark on your creative journey? Let's dive into the world of champion creation and make your mark on the Summoner's Rift. Happy designing!
 <br /><br/>
-Patch 12.3, Summoner's Rift, has never been this exciting. Stay tuned for more updates!
-<br />
 
           </p>
           </div>
           {/* <div>
             <Carousel slides={SliderData} />
           </div> */}
-          <button className='start-button' onClick={startProcess}>
-            Im ready
+          <button className="button start-button" onClick={startProcess}>
+            Let's Begin
+            <div className="button__horizontal"></div>
+            <div className="button__vertical"></div>
           </button>
         </div>
         }

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./ChampCreation.module.css";
+import './hoverbutton-red.css';
 
 export default function ChampCreation() {
   const [championInput, setChampionInput] = useState("");
@@ -188,9 +189,15 @@ export default function ChampCreation() {
                 value={championInput}
                 onChange={(e) => setChampionInput(e.target.value)}
               />
-              <div className="question-navigation" style={{ width: "100%", margin: "auto", display: "flex", justifyContent: "space-between" }}>
-              {currentQuestionIndex > 0 ? <input type="button" value="Back" className="next-button" onClick={handleBackClick}/> :<div/>}
-              <input type="button" value="Next" className="next-button" onClick={handleNextClick} />
+              <div className="question-navigation" style={{width:"80%", margin: "auto", display: "flex", justifyContent: "space-between" }}>
+              {currentQuestionIndex > 0 ?  
+              <button className="button-process" onClick={handleBackClick}>
+                Back
+              </button>
+              :<div/>}
+              <button className="button-process" onClick={handleNextClick}>
+                Next
+              </button>
               </div>
             </form>
           </div>
@@ -198,7 +205,13 @@ export default function ChampCreation() {
           <div className={styles.result}>
             <pre>{JSON.stringify(championProfile, null, 2)}</pre>
             {result}
-            <input type="submit" className="next-button" onClick={submitData} />
+            <div  onClick={submitData}>
+            <button className="button-process">
+            Create Champion
+            <div className="button__horizontal"></div>
+            <div className="button__vertical"></div>
+          </button>
+        </div>
           </div>
         )}
       </main>

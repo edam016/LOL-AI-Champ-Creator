@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import darius from 'src/app/assets/images/splash/darius-splash.jpg';
 import jax from '/src/app/assets/images/splash/jax.jpg'
 

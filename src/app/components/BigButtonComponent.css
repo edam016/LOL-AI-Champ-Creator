@@ -23,7 +23,7 @@
 
 .riot-button:hover {
   background-image: url('../assets/graphics/cta-lol-blank-hover.png');
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 /* Styles for the large window */
