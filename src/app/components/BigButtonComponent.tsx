@@ -21,7 +21,7 @@ const BigButtonComponent = () => {
         <span />
       ) : (
         <div className="riot-button" onClick={openWindow}>
-            <button className="button-hero start-button">
+            <button className="button-hero">
             Create Champion
             <div className="button__horizontal"></div>
             <div className="button__vertical"></div>
