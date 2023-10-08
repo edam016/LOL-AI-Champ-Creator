@@ -5,9 +5,10 @@ import './hoverbutton-red.css';
 
 interface ChampCreationProps {
   stopProcess: () => void;
+  showChampion: () => void;
 }
 
-const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess}) => {
+const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion}) => {
   const [championInput, setChampionInput] = useState("");
   const [result, setResult] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -42,6 +43,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess}) => {
 
   async function submitData(event: { preventDefault: () => void; }) {
     event.preventDefault();
+    showChampion();
     try {
       const response = await fetch("/api/generate", {
         method: "POST",
@@ -209,7 +211,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess}) => {
             <pre>{JSON.stringify(championProfile, null, 2)}</pre>
             {result}
             <div>
-              <button className="button-process">
+              <button className="button-process" onClick={submitData}>
               Create Champion
               <div className="button__horizontal"></div>
             <div className="button__vertical"></div>
