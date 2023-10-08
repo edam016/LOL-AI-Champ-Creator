@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Preload the image */}
-      <link rel="preload" href={ziggs.src} as="image" />
+      {/* <link rel="preload" href={ziggs.src} as="image" /> */}
       <body className={inter.className}>
         {/* Use the Image component to display the image */}
         <Image

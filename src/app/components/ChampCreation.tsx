@@ -3,7 +3,11 @@ import { useState } from "react";
 import styles from "./ChampCreation.module.css";
 import './hoverbutton-red.css';
 
-export default function ChampCreation() {
+interface ChampCreationProps {
+  stopProcess: () => void;
+}
+
+const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess}) => {
   const [championInput, setChampionInput] = useState("");
   const [result, setResult] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -61,8 +65,12 @@ export default function ChampCreation() {
   }
 
   const handleBackClick = () => {
-    setChampionInput("");
-    setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+    if(currentQuestionIndex == 0){
+      stopProcess();
+    }else{
+      setChampionInput("");
+      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   async function handleNextClick(event: { preventDefault: () => void; }) {
@@ -188,15 +196,11 @@ export default function ChampCreation() {
                 value={championInput}
                 onChange={(e) => setChampionInput(e.target.value)}
               />
-              <div className="question-navigation" style={{width:"80%", margin: "auto", display: "flex", justifyContent: "space-between" }}>
+              <div className="question-navigation" style={{width:"40vw", margin: "auto", display: "flex", justifyContent: "space-between" }}>
               {currentQuestionIndex > 0 ?  
-              <button className="button-process" onClick={handleBackClick}>
-                Back
-              </button>
-              :<div/>}
-              <button className="button-process" onClick={handleNextClick}>
-                Next
-              </button>
+              <input type = 'button' value='back' className="button-process" onClick={handleBackClick} />
+              : <input type = 'button' value='back' className="button-process" onClick={stopProcess} />}
+              <input type = 'button' value= 'next' className="button-process" onClick={handleNextClick} />
               </div>
             </form>
           </div>
@@ -204,7 +208,7 @@ export default function ChampCreation() {
           <div className={styles.result}>
             <pre>{JSON.stringify(championProfile, null, 2)}</pre>
             {result}
-            <div  onClick={submitData}>
+            <div>
               <button className="button-process">
               Create Champion
               <div className="button__horizontal"></div>
@@ -217,3 +221,6 @@ export default function ChampCreation() {
     </div>
   );
 }
+
+
+export default ChampCreation;

@@ -13,14 +13,17 @@ const Start = () => {
   const startProcess = () => {
     setIsStarted(true);
   };
+  const stopProcess = () => {
+    setIsStarted(false);
+  }
 
   return (
     <div>
         {isStarted 
-        ?  <ChampCreation /> :
+        ?  <ChampCreation stopProcess={stopProcess}/> :
         <div className='rules-text'>
           <div>
-          <p className='text'>
+          <div className='text'>
           <h3><u><b>League of Legends Patch Notes - Champion Concept Creator</b></u></h3>
 <br/>
 Greetings, fellow summoners! I'm excited to introduce the new <u><b>AI League of Legends Champion Concept Creator</b></u>. Get ready to embark on a journey of creativity and innovation as you shape your very own champion for the Rift!<br/><br/>
@@ -28,7 +31,7 @@ Greetings, fellow summoners! I'm excited to introduce the new <u><b>AI League of
 📜 Patch Highlights:<br/>
 
 - Dive into the creative process with a series of questions.<br/>
-- Only the first prompt, which includes tags, is mandatory. The AI will help generate content for the remaining prompts, leaving the creative canvas open for your genius.<br/>
+<u><b> - Only the first prompt, which includes tags, is mandatory. The AI will help generate content for the remaining prompts, leaving the creative canvas open for your genius.</b></u><br/>
 <br/>
 📖 Patch Notes:
 <br />
@@ -37,7 +40,7 @@ As a dedicated fan of League of Legends and technology, I'm thrilled to bring yo
 🎮 Ready to embark on your creative journey? Let's dive into the world of champion creation and make your mark on the Summoner's Rift. Happy designing!
 <br /><br/>
 
-          </p>
+          </div>
           </div>
           {/* <div>
             <Carousel slides={SliderData} />

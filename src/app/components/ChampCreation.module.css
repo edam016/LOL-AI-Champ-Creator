@@ -17,8 +17,8 @@
   .main input {
     font-size: 16px;
     line-height: 24px;
-    justify-content: center;
-    margin: auto;
+    justify-content: space-evenly;
+    margin: 10px;
     color: #353740;
     font-family: "ColfaxAI", Helvetica, sans-serif;
   }
@@ -28,12 +28,14 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    width:100%;
   }
   .main .icon {
     width: 34px;
   }
   .main h3 {
-    font-size: 32px;
+    text-align: center;
+    font-size: 25px;
     line-height: 40px;
     font-weight: bold;
     color: #fff;
@@ -46,15 +48,17 @@
   }
   .main input[type="text"] {
     padding: 12px 16px;
-    border: 1px solid #d9534f;
+    border: 2px solid #F1CE72;
     border-radius: 4px;
     justify-content: center;
     align-items: center;
+    color: #fff;
     justify-self: center;
+    background-color: #333333;
     margin: auto;
     margin-bottom: 24px;
-    outline-color: #d9534f;
-    width: 100%;
+    outline-color: #333333;
+    width: 30vw;
   }
   .main ::placeholder {
     color: #8e8ea0;
@@ -84,16 +88,10 @@
   }
   
   .main input[type="button"] {
-    padding: 12px 50px;
-    color: #fff;
-    background-color: #d9534f;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
+    color: #F1CE72;
   }
 
     
   .main input[type="button"]:hover {
-    background-color: rgba(17, 17, 17);
+    background-color: rgba(17, 17, 17, 0.9);
   }
