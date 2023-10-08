@@ -22,7 +22,7 @@ const Start = () => {
   }
 
   const rulesText = () => (
-    <div className='rules-text'>
+    <div className='rules-text fade-in'>
     <div>
     <div className='text'>
     <h3><u><b>League of Legends Patch Notes - Champion Concept Creator</b></u></h3>

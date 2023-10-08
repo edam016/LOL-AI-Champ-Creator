@@ -86,12 +86,28 @@
   .question-navigation{
     display: flex;
   }
-  
+
   .main input[type="button"] {
     color: #F1CE72;
   }
 
-    
   .main input[type="button"]:hover {
     background-color: rgba(17, 17, 17, 0.9);
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
