@@ -8,6 +8,7 @@ import ChampionView from './ChampionView';
 const Start = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [champReady, setChampReady] = useState(false);
+  const [result, setResult] = useState("");
 
   const startProcess = () => {
     setIsStarted(true);
@@ -19,6 +20,9 @@ const Start = () => {
   const showChampion = () => {
     setIsStarted(false);
     setChampReady(true);
+  }
+  const saveResult = (data: string) => {
+    setResult(data);
   }
 
   const rulesText = () => (
@@ -49,13 +53,12 @@ const Start = () => {
   );
 
   const condition1 = () => (
-    isStarted && !champReady ?  <ChampCreation stopProcess={stopProcess} showChampion={showChampion}/> : rulesText()
+    isStarted && !champReady ?  <ChampCreation saveResult={saveResult} stopProcess={stopProcess} showChampion={showChampion}/> : rulesText()
   );
-
 
   return (
     <div>
-        {!champReady ? condition1() : <ChampionView />}
+        {!champReady ? condition1() : <ChampionView result={result}/>}
     </div>
   );
 };

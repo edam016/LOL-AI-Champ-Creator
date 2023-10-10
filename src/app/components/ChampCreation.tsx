@@ -6,9 +6,11 @@ import './hoverbutton-red.css';
 interface ChampCreationProps {
   stopProcess: () => void;
   showChampion: () => void;
+  saveResult: (a: string) => void; // Use colon (:) to specify the type
 }
 
-const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion}) => {
+
+const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion, saveResult}) => {
   const [championInput, setChampionInput] = useState("");
   const [result, setResult] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -45,21 +47,22 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
     event.preventDefault();
     showChampion();
     try {
-      const response = await fetch("/api/generate", {
+      const response = await fetch("/src/app/components/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ champion: championProfile }),
       });
-
+      
       const data = await response.json();
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-
+      console.log(222);
       setResult(data.result);
-      setChampionInput("");
+      saveResult(data.result);
+      setChampionProfile(data.result);
     } catch(error) {
       // Consider implementing your own error handling logic here
       console.error(error);

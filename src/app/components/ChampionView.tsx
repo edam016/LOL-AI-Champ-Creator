@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const ChampionView = () => {
-  return (
-    <div>ChampionView</div>
-  )
+interface ChampionViewProps {
+  result: string; // Specify that the result prop should be a string
 }
 
-export default ChampionView
+const ChampionView: React.FC<ChampionViewProps> = ({ result }) => {
+  return (
+    <div>
+      {/* Display the result */}
+      <div>Result: {result}</div>
+    </div>
+  );
+}
+
+export default ChampionView;
