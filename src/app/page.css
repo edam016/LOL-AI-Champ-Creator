@@ -63,14 +63,14 @@ main {
   }
   @font-face {
     font-family: 'LeagueFont';
-    src: url('./fonts/BeaufortforLOL-Medium.woff') format('woff'); /* Adjust the format and path */
+    src: url('../../public/fonts/BeaufortforLOL-Medium.woff') format('woff'); /* Adjust the format and path */
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Gabarito';
-    src: url('./fonts/Gabarito-SemiBold.ttf') format('truetype'); /* Use 'truetype' format for TTF fonts */
+    src: url('../../public/fonts/Gabarito-SemiBold.ttf') format('truetype'); /* Use 'truetype' format for TTF fonts */
     font-weight: normal;
     font-style: normal;
   }
@@ -95,7 +95,7 @@ main {
   body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image: url('./assets/images/splash/ziggs-bg.jpg');
+    /* background-image: url('./assets/images/splash/ziggs-bg.jpg'); */
     /* animation: changeBG 60s infinite ease-in-out;
     animation-fill-mode: forwards; */
     background-size: cover;

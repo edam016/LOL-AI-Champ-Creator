@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './BigButtonComponent.css'; // Import your CSS file
 import Start from './Start';
 import CloseIcon from '@mui/icons-material/Close';
 import './hoverbutton-gold.css';
+import './BigbuttonComponent.css';
 
 const BigButtonComponent = () => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);

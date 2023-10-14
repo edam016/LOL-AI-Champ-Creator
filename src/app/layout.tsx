@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from "next/legacy/image"; // Import the Image component
-import ziggs from '/src/app/assets/images/splash/ziggs-bg.jpg';
+import ziggs from './assets/images/splash/ziggs-bg.jpg';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -11,7 +11,7 @@
   color: #111;
   align-items: center;
   cursor: pointer;
-  background-image: url('../assets/graphics/cta-lol-blank-red.png');
+  background-image: url('../assets/graphics/cta-lol-blank-hover.png');
   background-size: contain;
   transition: background-image 0.1s linear; /* Add a transition effect */
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 }
 
 .riot-button:hover {
-  background-image: url('../assets/graphics/cta-lol-blank-hover.png');
+  background-image: url('../assets/graphics/cta-lol-blank-red-hover.png');
   /* transform: scale(1.1); */
 }
 
