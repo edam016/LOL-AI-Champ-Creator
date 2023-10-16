@@ -1,18 +1,18 @@
 import Head from "next/head";
-import { useState } from "react";
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import styles from "./ChampCreation.module.css";
 import './hoverbutton-red.css';
 
 interface ChampCreationProps {
   stopProcess: () => void;
   showChampion: () => void;
-  saveResult: (a: string) => void; // Use colon (:) to specify the type
+  saveResult: (result: React.SetStateAction<string>) => void; // Use colon (:) to specify the type
 }
 
 
 const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion, saveResult}) => {
   const [tagsInput, setTagsInput] = useState("");
-  const [result, setResult] = useState(""); 
+  const [results, setResult] = useState([]); 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [championProfile, setChampionProfile] = useState("");
 
@@ -39,9 +39,9 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-      console.log(data.result);
+      console.log(data);
       setResult(data.result);
-      saveResult(data.result);
+      saveResult(data.champion);
       setChampionProfile(data.result);
     } catch(error) {
       // Consider implementing your own error handling logic here
@@ -85,8 +85,6 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
           </div>
         ) : (
           <div className={styles.result}>
-            <pre>{JSON.stringify(championProfile, null, 2)}</pre>
-            {result}
             <div>
               <button className="button-process" onClick={submitData}>
               Create Champion

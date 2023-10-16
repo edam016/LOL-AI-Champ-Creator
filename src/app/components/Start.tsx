@@ -21,8 +21,9 @@ const Start = () => {
     setIsStarted(false);
     setChampReady(true);
   }
-  const saveResult = (data: string) => {
+  const saveResult = (data: React.SetStateAction<string>) => {
     setResult(data);
+    console.log(data);
   }
 
   const rulesText = () => (
@@ -55,10 +56,9 @@ const Start = () => {
   const condition1 = () => (
     isStarted && !champReady ?  <ChampCreation saveResult={saveResult} stopProcess={stopProcess} showChampion={showChampion}/> : rulesText()
   );
-
   return (
     <div>
-        {!champReady ? condition1() : <ChampionView />}
+        {!champReady ? condition1() : <ChampionView result={result}/>}
     </div>
   );
 };

@@ -2,7 +2,7 @@ const { Configuration, OpenAI } = require('openai');
 
 
 const openai = new OpenAI({
-  apiKey: "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", // Replace with your OpenAI API key
+  apiKey: process.env.OPENAI_API_KEY, // Replace with your OpenAI API key
 });
 
 export default async function (req, res) {
@@ -16,17 +16,6 @@ export default async function (req, res) {
   }
 
   const tags = req.body.tags || '';
-  const results = [];
-  console.log(tags);
-  // if (tags.trim().length === 0) {
-  //   res.status(400).json({
-  //     error: {
-  //       message: "Please enter valid tags",
-  //     }
-  //   });
-  //   return;
-  // }
-
   try {
     const champion = await createLeagueOfLegendsChampion(tags);
     res.status(200).json({ champion });
@@ -53,13 +42,14 @@ async function createLeagueOfLegendsChampion(tags) {
     model: "text-davinci-003",
     prompt,
     temperature: 0.6,
+    max_tokens: 10,
   });
-  console.log(choices);
-  return completion.data.choices[0].text;
+  console.log(completion);
+  return completion.choices[0].text;
 }
 
 function generateChampionPrompt(tags) {
-  return `Create a new League of Legends champion inspired by the following tags: ${tags}?
+  return `Create a new League of Legends champion with a name, lore and abilities including a passive, a q ability, a w ability a e ability and an r ability, inspired by the following tags: ${tags}?
 
 Name: [Champion Name]
 Lore: [Champion Lore]
