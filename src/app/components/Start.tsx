@@ -23,7 +23,6 @@ const Start = () => {
   }
   const saveResult = (data: React.SetStateAction<string>) => {
     setResult(data);
-    console.log(data);
   }
 
   const rulesText = () => (

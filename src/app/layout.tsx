@@ -26,6 +26,7 @@ export default function RootLayout({
           src={ziggs}
           alt="Ziggs Background"
           layout="fill" // Set layout to "fill" to preload the image
+          objectFit='cover'
         />
         {children}
       </body>

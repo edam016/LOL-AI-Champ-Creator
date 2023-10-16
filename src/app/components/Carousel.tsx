@@ -4,7 +4,6 @@ import Image from "next/legacy/image";
 // import darius from '/public/assets/images/splash/darius-splash.jpg';
 // import jax from '/public/assets/images/splash/jax.jpg'
 
-// Define an interface for the slides prop
 interface CarouselProps {
   slides: {
     image: string;

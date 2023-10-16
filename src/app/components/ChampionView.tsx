@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState,  CSSProperties, useEffect } from "react";
 import "./ChampionView.module.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface ChampViewProps {
   result: string; // Add a 'result' property of type string
 }
 
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
+
+
 
 const ChampionView: React.FC<ChampViewProps> = ({ result }) => {
   const sections = result.split('\n\n');
+  let [loading, setLoading] = useState(sections.length > 1);
+  let [color, setColor] = useState("#b59758");
   console.log(result);
   console.log(sections);
   const abilities = {
@@ -20,6 +30,12 @@ const ChampionView: React.FC<ChampViewProps> = ({ result }) => {
     blank: sections[7],
     blank2: sections[8],
   };
+  console.log(abilities);
+  useEffect(() => {
+      setLoading(false)
+    },
+    [sections],
+  )
 
   const info = sections[0].split('\n');
   const champInfo = {
@@ -30,16 +46,25 @@ const ChampionView: React.FC<ChampViewProps> = ({ result }) => {
   }
   console.log(info);
   const lineStyle = {
-    borderTop: '1px solid #b59758', // Adjust the color and width as needed
+    borderTop: '1px solid #b59758', 
     margin: '20px 0',      
-    width: '20%'     // Adjust the margin as needed
+    width: '20%'     
   };
   
    return (
     <div>
       <main>
+        {loading ? 
+        <ClipLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      /> :
         <div className={"champion-description"} style={{
-          color: '#F1CE72', 
+          color: '#fff', 
           textAlign: 'left', 
           width: '100%', 
           fontFamily:'LeagueFont', 
@@ -61,6 +86,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result }) => {
           <div>{abilities.blank}</div>
           <div>{abilities.blank2}</div>
         </div>
+}
       </main>
     </div>
   );
