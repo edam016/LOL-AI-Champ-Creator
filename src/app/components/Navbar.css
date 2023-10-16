@@ -1,32 +1,30 @@
-/* Navbar.css */
 
-/* Reset some default styles */
 body, h1, p {
     margin: 0;
     padding: 0;
   }
   
-  /* Style the navbar */
+
   .navbar {
-    background-color: #1a1a1a; /* League of Legends black background */
-    color: #fff; /* White text color */
+    background-color: #1c2229; 
+    color: #fff; 
     font-family: 'Gabarito', Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1vh;
-    position: fixed; /* Fix the navbar position */
-    top: 0; /* Position at the top of the viewport */
-    right: 0; /* Position at the top right side */
-    width: 100%; /* Take the full width of the viewport */
+    position: fixed; 
+    top: 0;
+    right: 0; 
+    width: 100%; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #F1CE72;
     border-top: 3px solid #F1CE72;
   }
   
-  /* Style the League of Legends logo */
+
   .navbar .logo img {
-    width: 100px; /* Adjust the logo size as needed */
+    width: 100px;
   }
   
   /* Style the navigation links */

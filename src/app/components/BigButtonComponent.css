@@ -29,8 +29,9 @@
 /* Styles for the large window */
 .big-window {
   position: flex;
-  background-color: rgba(17, 17, 17, 0.6);
-  backdrop-filter: blur(1vw); /* Use vw units for blur effect to scale with window size */
+  /* background-color: rgba(17, 17, 17, 0.6); */
+  background-color: #1c2229;
+  backdrop-filter: blur(1vw);
   border: 2px solid #F1CE72;/* Use vw units for padding to scale with window size */
   margin-top: 8vh; /* Use vw and vh units for margin to scale with window size */
   height: 90vh;

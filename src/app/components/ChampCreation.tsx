@@ -17,7 +17,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
   const [championProfile, setChampionProfile] = useState("");
 
   const questions = [
-    "🌟 Enhance the essence of your champion with thematic words describing their nature (Seperate words with comma)"
+    "Amplify your champions essence with vivid thematic words describing their nature. Let your imagination run rampant and breathe life into the world of RuneTerra."
   ];
 
 
@@ -73,7 +73,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
               <input
                 type="text"
                 name="champion"
-                placeholder="Your answer"
+                placeholder="Seperate words with commas"
                 value={tagsInput}
                 onChange={(e) => setTagsInput(e.target.value)}
               />

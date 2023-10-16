@@ -11,9 +11,12 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@improbable-eng/grpc-web": "^0.15.0",
+    "@improbable-eng/grpc-web-node-http-transport": "^0.15.0",
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
     "@types/react-icons": "^3.0.0",
+    "google-protobuf": "^3.21.2",
     "next": "13.5.4",
     "openai": "^4.12.1",
     "react": "^18",

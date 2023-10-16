@@ -42,16 +42,17 @@ async function createLeagueOfLegendsChampion(tags) {
     model: "text-davinci-003",
     prompt,
     temperature: 0.6,
-    max_tokens: 10,
+    max_tokens: 400,
   });
   console.log(completion);
   return completion.choices[0].text;
 }
 
 function generateChampionPrompt(tags) {
-  return `Create a new League of Legends champion with a name, lore and abilities including a passive, a q ability, a w ability a e ability and an r ability, inspired by the following tags: ${tags}?
+  return `Create a new League of Legends champion with a name, lore and abilities including a passive, a q ability, a w ability a e ability, r ability and Champion Class inspired by the following tags: ${tags}?
 
 Name: [Champion Name]
+Class: [Champion Class]
 Lore: [Champion Lore]
 Abilities: [Champion Abilities]
 `;

@@ -39,7 +39,10 @@
     line-height: 40px;
     font-weight: bold;
     color: #fff;
-    margin: 16px 0 40px;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    font-family: 'LeagueFont';
   }
   .main form {
     display: flex;
@@ -56,9 +59,9 @@
     justify-self: center;
     background-color: #333333;
     margin: auto;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
     outline-color: #333333;
-    width: 30vw;
+    width: 39vw;
   }
   .main ::placeholder {
     color: #8e8ea0;
@@ -85,6 +88,7 @@
 
   .question-navigation{
     display: flex;
+    font-family: 'LeagueFont';
   }
 
   .main input[type="button"] {
