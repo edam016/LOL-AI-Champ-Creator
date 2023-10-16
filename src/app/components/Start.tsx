@@ -58,7 +58,7 @@ const Start = () => {
 
   return (
     <div>
-        {!champReady ? condition1() : <ChampionView result={result}/>}
+        {!champReady ? condition1() : <ChampionView />}
     </div>
   );
 };

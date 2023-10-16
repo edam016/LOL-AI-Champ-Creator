@@ -11,8 +11,8 @@ interface ChampCreationProps {
 
 
 const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion, saveResult}) => {
-  const [championInput, setChampionInput] = useState("");
-  const [result, setResult] = useState("");
+  const [tagsInput, setTagsInput] = useState("");
+  const [result, setResult] = useState(""); 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [championProfile, setChampionProfile] = useState("");
 
@@ -23,14 +23,16 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
 
   async function submitData(event: { preventDefault: () => void; }) {
     event.preventDefault();
+    console.log(tagsInput);
+    const tags = tagsInput.split(',').map(tag => tag.trim());
     showChampion();
     try {
-      const response = await fetch("/api/generate.js", {
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ champion: championProfile }),
+        body: JSON.stringify({ tags }),
       });
       
       const data = await response.json();
@@ -72,8 +74,8 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
                 type="text"
                 name="champion"
                 placeholder="Your answer"
-                value={championInput}
-                onChange={(e) => setChampionInput(e.target.value)}
+                value={tagsInput}
+                onChange={(e) => setTagsInput(e.target.value)}
               />
               <div className="question-navigation" style={{width:"40vw", margin: "auto", display: "flex", justifyContent: "space-between" }}>
               <input type = 'button' value='back' className="button-process" onClick={handleBackClick} />

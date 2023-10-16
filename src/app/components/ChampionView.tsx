@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import styles from "./ChampionView.module.css";
+import styles from "../components/ChampionView.module.css";
 
 export default function ChampionView() {
   const [animalInput, setAnimalInput] = useState("");
