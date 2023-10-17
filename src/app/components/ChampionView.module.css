@@ -7,3 +7,9 @@
 .champion-ability-q{
   color: black;
 }
+
+@media screen and (max-width: 900px) {
+  .screen-change-text {
+    font-size: 2px; 
+  }
+}

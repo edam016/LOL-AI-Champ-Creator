@@ -1,4 +1,4 @@
-/* Riot Games-style button */
+
 .riot-button {
     padding: 12px 50px;
     color: #fff;
@@ -15,7 +15,6 @@
     backdrop-filter: blur(9vw);
   }
 
-  /* Riot Games-style button */
 .start-button {
     display: flex;
     padding: 12px 50px;
@@ -41,8 +40,21 @@
     color: #fff;
     margin: 2vh 4vw;
     padding: 1vh 2vw; 
+    font-size: 1rem; 
     font-family: 'LeagueFont';
 }
+
+@media screen and (max-width: 900px) {
+  .screen-change-text {
+    font-size: 12px; /* or another value that works for your design */
+  }
+
+  h3{
+    font-size: 20px;
+  }
+}
+
+
 
 .text{
     margin-bottom: 3vh;
@@ -112,3 +124,5 @@
       opacity: 1;
     }
   }
+
+

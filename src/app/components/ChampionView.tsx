@@ -63,12 +63,11 @@ const ChampionView: React.FC<ChampViewProps> = ({ result }) => {
         aria-label="Loading Spinner"
         data-testid="loader"
       /> :
-        <div className={"champion-description"} style={{
+        <div className={"champion-description screen-change-text"} style={{
           color: '#fff', 
           textAlign: 'left', 
           width: '100%', 
           fontFamily:'LeagueFont', 
-          fontSize: 'large',
           margin: 'auto'}}>
           <div>{champInfo.Name}</div>
           <div>{champInfo.Name2}</div>

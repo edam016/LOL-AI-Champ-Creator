@@ -26,8 +26,7 @@ const Start = () => {
   }
 
   const rulesText = () => (
-    <div className='rules-text fade-in'>
-    <div>
+    <div className='rules-text fade-in screen-change-text'>
     <div className='text'>
     <h3><u><b>League of Legends Patch Notes - Champion Concept Creator</b></u></h3>
         <br/>
@@ -46,7 +45,6 @@ const Start = () => {
         🎮 Ready to embark on your creative journey? Let's dive into the world of champion creation and make your mark on the Summoner's Rift. Happy designing!
         <br /><br/>
     </div>
-    </div>
     <button className="button start-button" onClick={startProcess}>
       Let's Begin
       <div className="button__horizontal"></div>
@@ -60,7 +58,7 @@ const Start = () => {
   );
   return (
     <div>
-        {!champReady ? condition1() : <ChampionView result={result}/>}
+        {!champReady ? condition1() : <div className='fade-in'><ChampionView result={result}/></div>}
     </div>
   );
 };

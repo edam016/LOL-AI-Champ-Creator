@@ -6,7 +6,7 @@ import './hoverbutton-red.css';
 interface ChampCreationProps {
   stopProcess: () => void;
   showChampion: () => void;
-  saveResult: (result: React.SetStateAction<string>) => void; // Use colon (:) to specify the type
+  saveResult: (result: React.SetStateAction<string>) => void; 
 }
 
 
@@ -44,7 +44,6 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
       saveResult(data.champion);
       setChampionProfile(data.result);
     } catch(error) {
-      // Consider implementing your own error handling logic here
       console.error(error);
     }
   }
@@ -56,7 +55,6 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
   async function handleNextClick(event: { preventDefault: () => void; }) {
     event.preventDefault();
     try{
-            // Move to the next question
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } catch (error) {
       console.error(error);
@@ -64,7 +62,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
   }
 
   return (
-    <div>
+    <div className="fade-in">
       <main className={styles.main}>
         {currentQuestionIndex < questions.length ? (
           <div>
@@ -77,7 +75,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
                 value={tagsInput}
                 onChange={(e) => setTagsInput(e.target.value)}
               />
-              <div className="question-navigation" style={{width:"40vw", margin: "auto", display: "flex", justifyContent: "space-between" }}>
+              <div className="question-navigation" style={{width:"40vw", margin: "auto", display: "flex", justifyContent: "space-around" }}>
               <input type = 'button' value='back' className="button-process" onClick={handleBackClick} />
               <input type = 'button' value= 'done' className="button-process" onClick={handleNextClick} />
               </div>
@@ -85,7 +83,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
           </div>
         ) : (
           <div className={styles.result}>
-            <div>
+            <div className="fade-in">
               <button className="button-process" onClick={submitData}>
               Create Champion
               <div className="button__horizontal"></div>

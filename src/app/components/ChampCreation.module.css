@@ -115,3 +115,15 @@
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .question-navigation {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    
+    .button-process {
+      margin-bottom: 10px; /* Add some vertical spacing between buttons */
+    }
+  }
