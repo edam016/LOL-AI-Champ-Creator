@@ -7,9 +7,10 @@ import Navbar from './components/Navbar';
 import BigButtonComponent from './components/BigButtonComponent';
 import videoSrc from './assets/video/test.mp4';
 import MusicPlayer from './components/Music';
-
+import {Cloudinary} from "@cloudinary/url-gen";
 
 function Page() {
+  const cld = new Cloudinary({cloud: {cloudName: 'dsg28e1fv'}});
   return (
     <div className="App bg">
       {/* <link rel="preload" href="src/app/assets/images/splash/ziggs-bg.jpg" as="image"></link> */}
