@@ -2,7 +2,7 @@ const { Configuration, OpenAI } = require('openai');
 
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // Replace with your OpenAI API key
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export default async function (req, res) {
@@ -20,7 +20,6 @@ export default async function (req, res) {
     const champion = await createLeagueOfLegendsChampion(tags);
     res.status(200).json({ champion });
   } catch (error) {
-    // Consider adjusting the error handling logic for your use case
     if (error.response) {
       console.error(error.response.status, error.response.data);
       res.status(error.response.status).json(error.response.data);
@@ -36,7 +35,6 @@ export default async function (req, res) {
 }
 
 async function createLeagueOfLegendsChampion(tags) {
-  // Generate a League of Legends champion based on the provided tags
   const prompt = generateChampionPrompt(tags);
   const completion = await openai.completions.create({
     model: "text-davinci-003",

@@ -1,7 +1,7 @@
 // Navbar.tsx
 
 import React from 'react';
-import './Navbar.css'; // Import the CSS for styling
+import './Navbar.css'; 
 import { GitHub } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
 import leagueLogo from '../assets/graphics/lol-logo.svg'

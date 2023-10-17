@@ -3,7 +3,7 @@ import "./ChampionView.module.css";
 import ClipLoader from "react-spinners/ClipLoader";
 
 interface ChampViewProps {
-  result: string; // Add a 'result' property of type string
+  result: string; 
 }
 
 const override: CSSProperties = {

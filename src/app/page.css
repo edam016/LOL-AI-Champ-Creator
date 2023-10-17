@@ -11,14 +11,13 @@ main {
     gap: 20px;
   }
   
-  /* Style individual entries */
   .entry {
-    background-color: rgba(255, 255, 255, 0.9); /* Add transparency to the background */
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    font-family: 'LeagueFont', Arial, sans-serif; /* Use the League of Legends font or a similar one */
+    font-family: 'LeagueFont', Arial, sans-serif; 
     color: #333;
     text-align: center;
     transition: transform 0.2s ease;
@@ -27,21 +26,20 @@ main {
   }
   
   .entry:hover {
-    transform: scale(1.02); /* Add a hover effect to enlarge the entry */
+    transform: scale(1.02); 
   }
   
   .entry h2 {
     font-size: 24px;
     margin: 0 0 10px;
-    color: #333; /* Adjust text color */
+    color: #333;
   }
   
   .entry p {
     font-size: 16px;
-    color: #333; /* Adjust text color */
+    color: #333; 
   }
-  
-  /* Style action buttons */
+
   .entry-actions {
     margin-top: 10px;
   }
@@ -63,14 +61,14 @@ main {
   }
   @font-face {
     font-family: 'LeagueFont';
-    src: url('../../public/fonts/BeaufortforLOL-Medium.woff') format('woff'); /* Adjust the format and path */
+    src: url('../../public/fonts/BeaufortforLOL-Medium.woff') format('woff'); 
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Gabarito';
-    src: url('../../public/fonts/Gabarito-SemiBold.ttf') format('truetype'); /* Use 'truetype' format for TTF fonts */
+    src: url('../../public/fonts/Gabarito-SemiBold.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
   }
@@ -125,8 +123,8 @@ main {
 
   .music-player-container {
     position: fixed;
-    bottom: 10px; /* Adjust the desired distance from the bottom */
-    right: 15px; /* Adjust the desired distance from the right */
+    bottom: 10px; 
+    right: 15px;
     z-index: 10;
   }
   

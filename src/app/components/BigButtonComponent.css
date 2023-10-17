@@ -1,6 +1,4 @@
-/* BigButtonComponent.css */
 
-/* Riot Games-style button */
 .riot-button {
   display: flex;
   text-align: center;
@@ -13,7 +11,7 @@
   cursor: pointer;
   background-image: url('../assets/graphics/cta-lol-blank-red.png');
   background-size: contain;
-  transition: background-image 0.1s linear; /* Add a transition effect */
+  transition: background-image 0.1s linear; 
   background-repeat: no-repeat;
   height: 180px;
   width: 388px;
@@ -25,14 +23,14 @@
   /* transform: scale(1.1); */
 }
 
-/* Styles for the large window */
+
 .big-window {
   position: flex;
   /* background-color: rgba(17, 17, 17, 0.6); */
   background-color: #1c2229;
   backdrop-filter: blur(1vw);
-  border: 2px solid #F1CE72;/* Use vw units for padding to scale with window size */
-  margin-top: 8vh; /* Use vw and vh units for margin to scale with window size */
+  border: 2px solid #F1CE72;
+  margin-top: 8vh; 
   height: 100vh;
   width: 98vw;
   z-index: 1000;
@@ -41,23 +39,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y:auto; /* Add vertical scrollbar if content overflows */
-  max-height: 90vh; /* Limit the maximum height to the viewport height */
-  transition: right 0.3s; /* Adjust transition property to "right" */
+  overflow-y:auto; 
+  max-height: 90vh; 
+  transition: right 0.3s;
   z-index: 9999;
 }
 
-/* Close button inside the window */
 .close-button {
-  position: absolute; /* Position the button absolutely within the window */
-  top: 1vw; /* Adjust top value to position the button at the top */
-  right: 1vw; /* Adjust right value to position the button at the right */
+  position: absolute;
+  top: 1vw; 
+  right: 1vw;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 10px; /* Use vw units for padding to scale with window size */
+  padding: 10px; 
   text-align: center;
   text-decoration: none;
-  font-size: 1vw; /* Use vw units for font size to scale with window size */
+  font-size: 1vw; 
   cursor: pointer;
 }

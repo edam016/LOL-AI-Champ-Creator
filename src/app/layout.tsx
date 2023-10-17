@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from "next/legacy/image"; // Import the Image component
 import ziggs from './assets/images/splash/ziggs-bg.jpg';
+import Carousel from './components/Carousel';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,16 +19,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Preload the image */}
       {/* <link rel="preload" href={ziggs.src} as="image" /> */}
       <body className={inter.className}>
-        {/* Use the Image component to display the image */}
         <Image
           src={ziggs}
           alt="Ziggs Background"
-          layout="fill" // Set layout to "fill" to preload the image
+          layout="fill"
           objectFit='cover'
         />
+        <Carousel slides={[]} />
         {children}
       </body>
     </html>

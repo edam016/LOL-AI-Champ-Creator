@@ -2,7 +2,6 @@ import React, { Component, RefObject } from 'react';
 import audioFile from '../../../src/app/assets/audio/worlds2023audio.mp3';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
 interface State {
   isPlaying: boolean;
@@ -16,12 +15,11 @@ class MusicPlayer extends Component<{}, State> {
     super(props);
     this.state = {
       isPlaying: false,
-      volume: 1.0, // Initial volume (1.0 represents 100%)
+      volume: 1.0,
     };
     this.audioRef = React.createRef();
   }
 
-  // Play or pause the audio
   toggleAudio = () => {
     const audio = this.audioRef.current;
     if (audio) {
@@ -34,7 +32,6 @@ class MusicPlayer extends Component<{}, State> {
     }
   };
 
-  // Update the volume
   handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const volume = parseFloat(event.target.value);
     const audio = this.audioRef.current;
@@ -51,7 +48,7 @@ class MusicPlayer extends Component<{}, State> {
         <button onClick={this.toggleAudio}>
           {this.state.isPlaying ? <PauseIcon  style={{ color: '#F1CE72' }} /> : <PlayArrowIcon style={{ color: '#F1CE72' }} />}
         </button>
-        <div className="vertical-slider" style={{paddingTop: '5px', paddingRight: '10px', color: '#111'}}>
+        <div className="vertical-slider" style={{paddingTop: '5px', paddingRight: '15px', color: '#111'}}>
           <input
             type="range"
             min="0"
