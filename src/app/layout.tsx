@@ -1,9 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Image from "next/legacy/image"; // Import the Image component
+import Image from "next/legacy/image"; 
 import ziggs from './assets/images/splash/ziggs-bg.jpg';
-import Carousel from './components/Carousel';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,7 +26,6 @@ export default function RootLayout({
           layout="fill"
           objectFit='cover'
         />
-        <Carousel slides={[]} />
         {children}
       </body>
     </html>

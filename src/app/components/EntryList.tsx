@@ -21,17 +21,15 @@ const EntryList = () => {
       title: 'Sample Entry 2',
       content: 'This is the content of sample entry 2.',
     },
-    // Add more entries as needed
   ]);
 
   const addEntry = () => {
     const newEntry: Entry = {
-      id: entries.length + 1, // Assign a unique ID
+      id: entries.length + 1, 
       title: 'New Entry',
       content: 'This is a new entry added below.',
     };
 
-    // Concatenate the new entry with the existing entries
     setEntries((prevEntries) => prevEntries.concat(newEntry));
   };
 
