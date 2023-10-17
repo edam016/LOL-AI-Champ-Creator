@@ -16,8 +16,17 @@ module.exports = {
             outputPath: 'videos/', // The directory where videos will be copied
           },
         },
-      });
-  
+      },
+      {
+        test: /\.mp3$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'static/media/[name].[hash:8].[ext]',
+          },
+        },
+      },
+      );
       return config;
     },
   };

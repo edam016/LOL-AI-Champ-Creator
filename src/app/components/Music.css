@@ -1,0 +1,3 @@
+.vertical-slider input[type="range"]::-webkit-slider-thumb {
+    background: #FFF;
+  }

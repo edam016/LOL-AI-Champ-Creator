@@ -44,7 +44,6 @@ async function createLeagueOfLegendsChampion(tags) {
     temperature: 0.6,
     max_tokens: 400,
   });
-  console.log(completion);
   return completion.choices[0].text;
 }
 

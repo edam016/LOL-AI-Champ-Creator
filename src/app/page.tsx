@@ -6,6 +6,7 @@ import './page.css';
 import Navbar from './components/Navbar';
 import BigButtonComponent from './components/BigButtonComponent';
 import videoSrc from './assets/video/test.mp4';
+import MusicPlayer from './components/Music';
 
 
 function Page() {
@@ -15,7 +16,12 @@ function Page() {
       {/* <video src={videoSrc} autoPlay loop/> */}
       <div className='content'>
         <Navbar />
+        <div style={{zIndex: '20'}}>
         <BigButtonComponent />
+        </div>
+        <div className='music-player-container' style={{ zIndex: '19'}}>
+        <MusicPlayer />
+        </div>
       </div>
     </div>
   );

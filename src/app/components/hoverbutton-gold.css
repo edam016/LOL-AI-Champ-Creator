@@ -7,7 +7,7 @@
     appearance: none;
     border: 0;
     background: transparent;
-    color: #111;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: .25em;
     outline: none;
@@ -22,7 +22,7 @@
   
   .button-hero:hover {
     background: rgba(100, 0, 0, .03);
-    color: black;
+    color: #F1CE72;
   }
   
   .button__horizontal,

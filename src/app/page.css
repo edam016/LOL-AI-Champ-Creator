@@ -122,3 +122,11 @@ main {
       background-image: url('./assets/images/splash/tahmkench-splash.jpg');
     }
   } */
+
+  .music-player-container {
+    position: fixed;
+    bottom: 10px; /* Adjust the desired distance from the bottom */
+    right: 15px; /* Adjust the desired distance from the right */
+    z-index: 10;
+  }
+  
