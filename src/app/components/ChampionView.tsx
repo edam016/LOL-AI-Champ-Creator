@@ -65,7 +65,6 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
         setImageData(data);
         console.log(data);
       }
-
         }
       } catch (error) {
         console.error(error);
