@@ -6,7 +6,7 @@ body, h1, p {
   
   .navbar {
     background-color: #1c2229; 
-    color: #fff; 
+    color: #f5f1e6;
     font-family: 'Gabarito', Arial, sans-serif;
     display: flex;
     justify-content: space-between;

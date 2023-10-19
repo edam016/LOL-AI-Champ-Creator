@@ -1,4 +1,4 @@
-const { Configuration, OpenAI } = require('openai');
+const { OpenAI } = require('openai');
 
 
 const openai = new OpenAI({
@@ -40,7 +40,7 @@ async function createLeagueOfLegendsChampion(tags) {
     model: "text-davinci-003",
     prompt,
     temperature: 0.6,
-    max_tokens: 400,
+    max_tokens: 50,
   });
   return completion.choices[0].text;
 }

@@ -18,6 +18,8 @@
   box-sizing:border-box;
 }
 
+
+
 .riot-button:hover {
   background-image: url('../assets/graphics/cta-lol-blank-hover.png');
   /* transform: scale(1.1); */
@@ -28,7 +30,6 @@
   position: flex;
   /* background-color: rgba(17, 17, 17, 0.6); */
   background-color: #1c2229;
-  backdrop-filter: blur(1vw);
   border: 2px solid #F1CE72;
   margin-top: 8vh; 
   height: 100vh;
@@ -56,5 +57,21 @@
   text-align: center;
   text-decoration: none;
   font-size: 1vw; 
+  cursor: pointer;
+}
+
+
+.create-champion-button{
+  padding: 20px 30px 20px 30px;
+  background-color: #1c2229;
+  color:#F1CE72;
+  border: 1px solid #F1CE72;
+  font-family: 'LeagueFont';
+  font-size: 20px;
+}
+
+.create-champion-button:hover{
+  background-color: #f5f1e6;
+  color: #1c2229;
   cursor: pointer;
 }

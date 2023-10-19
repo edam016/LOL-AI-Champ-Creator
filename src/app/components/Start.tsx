@@ -9,6 +9,7 @@ const Start = () => {
   const [isStarted, setIsStarted] = useState(false);
   const [champReady, setChampReady] = useState(false);
   const [result, setResult] = useState("");
+  const [resultTags, setResultTags] = useState("");
 
   const startProcess = () => {
     setIsStarted(true);
@@ -21,8 +22,9 @@ const Start = () => {
     setIsStarted(false);
     setChampReady(true);
   }
-  const saveResult = (data: React.SetStateAction<string>) => {
+  const saveResult = (data: React.SetStateAction<string>, tags: React.SetStateAction<string>) => {
     setResult(data);
+    setResultTags(tags);
   }
 
   const rulesText = () => (
@@ -58,7 +60,7 @@ const Start = () => {
   );
   return (
     <div>
-        {!champReady ? condition1() : <div className='fade-in'><ChampionView result={result}/></div>}
+        {!champReady ? condition1() : <div className='fade-in'><ChampionView resultTags={resultTags} result={result}/></div>}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import './hoverbutton-red.css';
 interface ChampCreationProps {
   stopProcess: () => void;
   showChampion: () => void;
-  saveResult: (result: React.SetStateAction<string>) => void; 
+  saveResult: (result: React.SetStateAction<string>, resultTags: React.SetStateAction<string>) => void; 
 }
 
 
@@ -41,7 +41,7 @@ const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion
       }
       console.log(data);
       setResult(data.result);
-      saveResult(data.champion);
+      saveResult(data.champion, tagsInput);
       setChampionProfile(data.result);
     } catch(error) {
       console.error(error);
