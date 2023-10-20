@@ -1,5 +1,5 @@
 .champion-description{
-  width: 80%;
+  width: 50%;
   color: white;
   font-size: medium;
 }
@@ -12,8 +12,12 @@
   .screen-change-text {
     font-size: 2px; 
   }
+  .screen-change{
+    display: grid;
+  }
 }
 
-.container{
+.container {
   display: flex;
+  flex-direction: column;
 }

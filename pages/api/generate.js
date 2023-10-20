@@ -40,7 +40,7 @@ async function createLeagueOfLegendsChampion(tags) {
     model: "text-davinci-003",
     prompt,
     temperature: 0.6,
-    max_tokens: 50,
+    max_tokens: 400,
   });
   return completion.choices[0].text;
 }

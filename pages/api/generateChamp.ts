@@ -39,6 +39,7 @@ export default async function handler(req: { method: string; body: { textPrompt:
           res.status(response.status).json({ error: 'API request failed' });
         }
       } catch (error) {
+        console.log(error);
         res.status(500).json({ error: 'Internal server error' });
       }
     } 

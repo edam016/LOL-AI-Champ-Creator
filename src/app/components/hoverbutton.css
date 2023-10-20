@@ -20,6 +20,7 @@
   
   .button:hover {
     background: rgba(100, 0, 0, .03);
+    
   }
   
   .button__horizontal,
@@ -58,7 +59,7 @@
   }
   
   .button__vertical {
-    --horizontal-offset: calc(var(--offset) * -1);
+    --horizontal-offset: calc(var(--offset) * -01);
     border-left: var(--border-size) solid currentcolor;
     border-right: var(--border-size) solid currentcolor;
   }

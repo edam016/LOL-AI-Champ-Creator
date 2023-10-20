@@ -1,6 +1,8 @@
 import { useState,  CSSProperties, useEffect } from "react";
 import "./ChampionView.module.css";
 import ClipLoader from "react-spinners/ClipLoader";
+import ziggs from '../assets/images/splash/jax.jpg';
+import { MoonLoader } from "react-spinners";
 
 interface ChampViewProps {
   result: string; 
@@ -16,7 +18,6 @@ const override: CSSProperties = {
 const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   const sections = result.split('\n\n');
   let [color, setColor] = useState("#b59758");
-  const [loading, setLoading] = useState(sections.length > 1);
   const [imageData, setImageData] = useState("");
 
 
@@ -48,9 +49,9 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        if (info[3]) {
+        if (info[3] && resultTags) {
       // Update the URL to match your Next.js API route
-      const textPrompt = info[3];
+      const textPrompt = info[3] + "," + resultTags;
       console.log(textPrompt);
       const response = await fetch('/api/generateChamp', {
         method: 'POST',
@@ -79,7 +80,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
 
     fetchData();
     console.log('trigger');
-  }, [info[3]]);
+  }, [info[3], resultTags]);
 
   interface GenerationResponse {
     data: any;
@@ -93,20 +94,20 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   return (
     <div>
       <main>
-        {loading ? 
-          <ClipLoader
+        {sections.length == 0 ? 
+          <MoonLoader
             cssOverride={override}
             size={150}
             aria-label="Loading Spinner"
             data-testid="loader"
+            color="#F1CE72"
           /> :
-          <div className = 'container'>
+          <div className={'screen-change'}style={{display:'flex'}}>
             <div className={"champion-description screen-change-text"} style={{
               color: '#fff', 
               textAlign: 'left', 
-              width: '100%', 
-              fontFamily:'LeagueFont', 
-              margin: 'auto'}}>
+              width: '65%', 
+              fontFamily:'LeagueFont'}}>
               <div>{champInfo.Name}</div>
               <div>{champInfo.Name2}</div>
               <div style={lineStyle}></div>
@@ -123,9 +124,19 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
               <div>{abilities.blank}</div>
               <div>{abilities.blank2}</div>
             </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', alignSelf: 'center', margin: 'auto', flexGrow: '1', padding: '10px'}}>
+            {imageData =="" ? <MoonLoader
+            cssOverride={override}
+            size={100}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            color="#F1CE72"
+              />:
               <div>
                 <img src={`data:image/png;base64,${imageData}`} height={300} width={300} />
               </div>
+            }
+            </div>
             </div>
         }
       </main>
