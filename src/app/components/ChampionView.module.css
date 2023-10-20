@@ -13,3 +13,7 @@
     font-size: 2px; 
   }
 }
+
+.container{
+  display: flex;
+}

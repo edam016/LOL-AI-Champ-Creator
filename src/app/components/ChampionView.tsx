@@ -17,7 +17,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   const sections = result.split('\n\n');
   let [color, setColor] = useState("#b59758");
   const [loading, setLoading] = useState(sections.length > 1);
-  const [imageData, setImageData] = useState<GenerationResponse | null>(null);
+  const [imageData, setImageData] = useState("");
 
 
   const abilities = {
@@ -59,13 +59,17 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
         },
         body: JSON.stringify({ textPrompt }),
       });
-      const responseJSON = (await response.json()) as GenerationResponse
-      console.log(responseJSON);
+      const responseJSON = (await response.json()) as GenerationResponse;
+      console.log(responseJSON.data.artifacts[0].base64);
       if (response.status !== 200) {
         throw new Error(`Request failed with status ${response.status}`);
       }
-        setImageData(responseJSON);
-
+      if (responseJSON && responseJSON.data.artifacts.length > 0) {
+        console.log(responseJSON);
+        setImageData(responseJSON.data.artifacts[0].base64);
+      } else {
+        console.error('Response data is not in the expected format.');
+      }
         console.log(response.status);
         }
       } catch (error) {
@@ -78,6 +82,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   }, [info[3]]);
 
   interface GenerationResponse {
+    data: any;
     artifacts: Array<{
       base64: string
       seed: number
@@ -95,7 +100,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
             aria-label="Loading Spinner"
             data-testid="loader"
           /> :
-          <div>
+          <div className = 'container'>
             <div className={"champion-description screen-change-text"} style={{
               color: '#fff', 
               textAlign: 'left', 
@@ -118,7 +123,10 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
               <div>{abilities.blank}</div>
               <div>{abilities.blank2}</div>
             </div>
-          </div>
+              <div>
+                <img src={`data:image/png;base64,${imageData}`} height={300} width={300} />
+              </div>
+            </div>
         }
       </main>
     </div>

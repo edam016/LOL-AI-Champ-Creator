@@ -12,7 +12,7 @@ interface ChampCreationProps {
 
 const ChampCreation: React.FC<ChampCreationProps> = ({ stopProcess, showChampion, saveResult}) => {
   const [tagsInput, setTagsInput] = useState("");
-  const [results, setResult] = useState([]); 
+  const [results, setResult] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [championProfile, setChampionProfile] = useState("");
 
