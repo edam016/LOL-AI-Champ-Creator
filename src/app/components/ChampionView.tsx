@@ -17,7 +17,8 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   const sections = result.split('\n\n');
   let [color, setColor] = useState("#b59758");
   const [loading, setLoading] = useState(sections.length > 1);
-  const [imageData, setImageData] = useState<string | null>(null); // Initialize imageData as null
+  const [imageData, setImageData] = useState<GenerationResponse | null>(null);
+
 
   const abilities = {
     P: sections[1],
@@ -43,16 +44,14 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
     margin: '20px 0',      
     width: '20%'     
   };
-  console.log(result);
-  console.log(result );
-  console.log(resultTags);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        if (result) {
+        if (info[3]) {
       // Update the URL to match your Next.js API route
       const textPrompt = info[3];
+      console.log(textPrompt);
       const response = await fetch('/api/generateChamp', {
         method: 'POST',
         headers: {
@@ -60,20 +59,31 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
         },
         body: JSON.stringify({ textPrompt }),
       });
-      if (response.ok) {
-        const data = await response.json();
-        setImageData(data);
-        console.log(data);
+      const responseJSON = (await response.json()) as GenerationResponse
+      console.log(responseJSON);
+      if (response.status !== 200) {
+        throw new Error(`Request failed with status ${response.status}`);
       }
+        setImageData(responseJSON);
+
+        console.log(response.status);
         }
       } catch (error) {
         console.error(error);
-        // Handle errors gracefully
       }
     }
 
     fetchData();
-  }, [result, resultTags, info]);
+    console.log('trigger');
+  }, [info[3]]);
+
+  interface GenerationResponse {
+    artifacts: Array<{
+      base64: string
+      seed: number
+      finishReason: string
+    }>
+  }
 
   return (
     <div>
@@ -107,9 +117,6 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
               <div>{abilities.R}</div>
               <div>{abilities.blank}</div>
               <div>{abilities.blank2}</div>
-            </div>
-            <div>
-              {imageData && <img src={imageData} alt="Champion Image" />}
             </div>
           </div>
         }
