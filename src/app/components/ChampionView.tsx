@@ -102,7 +102,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
             data-testid="loader"
             color="#F1CE72"
           /> :
-          <div className={'screen-change'}style={{display:'flex'}}>
+          <div className={'screen-change'}style={{display:'flex', paddingTop: '40px', paddingBottom:'40px'}}>
             <div className={"champion-description screen-change-text"} style={{
               color: '#fff', 
               textAlign: 'left', 
@@ -132,7 +132,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
             data-testid="loader"
             color="#F1CE72"
               />:
-              <div>
+              <div style={{ border:'2px solid '}}>
                 <img src={`data:image/png;base64,${imageData}`} height={300} width={300} />
               </div>
             }
