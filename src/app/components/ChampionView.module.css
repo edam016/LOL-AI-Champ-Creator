@@ -1,5 +1,5 @@
 .champion-description{
-  width: 80%;
+  width: 50%;
   color: white;
   font-size: medium;
 }
@@ -8,8 +8,15 @@
   color: black;
 }
 
-@media screen and (max-width: 900px) {
-  .screen-change-text {
-    font-size: 2px; 
+@media screen and (max-width: 800px) {
+  .screen-change{
+    display: grid;
+    font-size: 2px;
   }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
 }

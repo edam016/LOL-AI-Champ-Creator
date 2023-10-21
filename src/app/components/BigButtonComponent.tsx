@@ -20,11 +20,9 @@ const BigButtonComponent = () => {
       {isWindowOpen ? (
         <span />
       ) : (
-        <div className="riot-button" onClick={openWindow}>
+        <div onClick={openWindow}>
             <button className="button-hero start-button">
-            Create Champion
-            <div className="button__horizontal"></div>
-            <div className="button__vertical"></div>
+            <span style={{ color: '#fff'}}>Create Champion</span>
           </button>
         </div>
       )}

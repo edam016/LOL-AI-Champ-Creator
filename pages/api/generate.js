@@ -1,4 +1,4 @@
-const { Configuration, OpenAI } = require('openai');
+const { OpenAI } = require('openai');
 
 
 const openai = new OpenAI({
