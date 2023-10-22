@@ -24,7 +24,7 @@ export default async function handler(req: { method: string; body: { textPrompt:
             cfg_scale: 6,
             height: 1024,
             width: 1024,
-            steps: 30,
+            steps: 20,
             style_preset:'digital-art',
             samples: 1,
           }),
