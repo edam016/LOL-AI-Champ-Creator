@@ -48,7 +48,7 @@ class MusicPlayer extends Component<{}, State> {
         <button onClick={this.toggleAudio}>
           {this.state.isPlaying ? <PauseIcon  style={{ color: '#F1CE72' }} /> : <PlayArrowIcon style={{ color: '#F1CE72' }} />}
         </button>
-        <div className="vertical-slider" style={{paddingTop: '5px', paddingRight: '15px', color: '#111'}}>
+        <div className="vertical-slider" style={{paddingTop: '5px', paddingRight: '15px', color: '#F1CE72'}}>
           <input
             type="range"
             min="0"
