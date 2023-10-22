@@ -1,4 +1,4 @@
-# League of Legends Champion Concept Creator
+# League of Legends AI Champion Concept Creator
 
 Welcome to the League of Legends Champion Concept Creator, a tool powered by OpenAI's API and a Stability API to generate unique champion concepts for the popular online game, League of Legends.
 
