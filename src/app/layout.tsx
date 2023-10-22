@@ -4,12 +4,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from "next/legacy/image"; 
-import ziggs from './assets/images/splash/ziggs-bg.jpg';
-import maokai from './assets/images/splash/maokai-splash.jpg';
-import jax from './assets/images/splash/jax.jpg';
-import koglulu from './assets/images/splash/kogmaw-lulu-splash.jpg';
 
 const inter = Inter({ subsets: ['latin'] });
+const cloudinaryURL = 'https://res.cloudinary.com/dsg28e1fv/image/upload/v1697916344/ziggs-bg_k1ma0r.jpg';
 
 export const metadata: Metadata = {
   title: 'LOL AI Champ Creator',
@@ -26,7 +23,7 @@ export default function RootLayout({
       {/* <link rel="preload" href={ziggs.src} as="image" /> */}
       <body className={inter.className}>
         <Image
-          src={ziggs}
+          src={cloudinaryURL}
           alt="Ziggs Background"
           layout="fill"
           objectFit='cover'

@@ -40,7 +40,7 @@
     color: #fff;
     margin: 2vh 4vw;
     padding: 1vh 2vw; 
-    font-size: 1rem; 
+    font-size: 14px; 
     font-family: 'LeagueFont';
 }
 
@@ -57,7 +57,7 @@
 
 
 .text{
-    margin-bottom: 3vh;
+    padding-bottom: 3vh;
 }
 
   .slider {

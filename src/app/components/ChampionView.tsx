@@ -132,7 +132,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
             data-testid="loader"
             color="#F1CE72"
               />:
-              <div style={{ border:'2px solid '}}>
+              <div style={{ border:'2px solid #F1CE72'}}>
                 <img src={`data:image/png;base64,${imageData}`} height={300} width={300} />
               </div>
             }
