@@ -4,6 +4,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from "next/legacy/image"; 
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 const cloudinaryURL = 'https://res.cloudinary.com/dsg28e1fv/image/upload/v1697916344/ziggs-bg_k1ma0r.jpg';
@@ -29,6 +30,7 @@ export default function RootLayout({
           objectFit='cover'
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
