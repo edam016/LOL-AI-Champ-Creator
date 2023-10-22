@@ -42,9 +42,9 @@ const Start = () => {
         📖 Patch Notes:
         <br />
         As a dedicated fan of League of Legends and coding, I&apos;m thrilled to bring you this new tool. It&apos;s designed to help you craft your dream champion and breathe life into your unique ideas. 
-        You&apos;ll start with a prompt, which asks for tags related to your imaginary champion, and with the power of AI using OpenAI&apos;s API in conjunction with Stability AI&apos;s generative AI, the possibilities are endless!<br/> Feel free to explore and unleash your imagination as you design your champion&apos;s lore, abilities, and more!
+        You&apos;ll start with a prompt, which asks for tags related to your imaginary champion, and with the power of artificial intelligence using OpenAI&apos;s API in conjunction with Stability.AI&apos;s generative AI, the possibilities are endless!<br/> Feel free to explore and unleash your imagination as you design your champion&apos;s lore, abilities, and more!
         <br /><br/>
-        🎮 Ready to embark on your creative journey? Let&apos;s dive into the world of champion creation and make your mark on the Summoner&apos;s Rift. Happy designing!
+        🎮 Ready to embark on your creative journey? Let&apos;s dive into the world of champion creation and make your mark on Summoner&apos;s Rift. Happy creating!
         <br /><br/>
 
         <h2>Warning, Summoner! Please be patient with the tool as the AI is working tirelessly to bring to life your finest creations. It may take some time to load, but trust us, it&apos;ll be worth the wait!</h2>
