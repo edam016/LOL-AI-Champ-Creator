@@ -1,7 +1,5 @@
 import { useState,  CSSProperties, useEffect } from "react";
 import "./ChampionView.module.css";
-import ClipLoader from "react-spinners/ClipLoader";
-import ziggs from '../assets/images/splash/jax.jpg';
 import { MoonLoader } from "react-spinners";
 
 interface ChampViewProps {
