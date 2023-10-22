@@ -21,10 +21,10 @@ export default async function handler(req: { method: string; body: { textPrompt:
           },
           body: JSON.stringify({
             text_prompts: [{ text: textPrompt }],
-            cfg_scale: 2,//works with 6 and 10
+            cfg_scale: 6,//works with 6 and 10
             height: 1024,
             width: 1024,
-            steps: 30,//good with 10
+            steps: 12,//good with 10
             style_preset:'digital-art',
             samples: 1,
           }),
