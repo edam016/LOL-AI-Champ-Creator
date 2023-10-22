@@ -21,9 +21,9 @@ export default async function handler(req: { method: string; body: { textPrompt:
           },
           body: JSON.stringify({
             text_prompts: [{ text: textPrompt }],
-            cfg_scale: 5,
-            height: 1024,
-            width: 1024,
+            cfg_scale: 7,
+            height: 512,
+            width: 512,
             steps: 10,
             samples: 1,
           }),
