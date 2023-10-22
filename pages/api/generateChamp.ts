@@ -25,7 +25,7 @@ export default async function handler(req: { method: string; body: { textPrompt:
             height: 1024,
             width: 1024,
             steps: 10,
-            style_preset:'comic-book',
+            style_preset:'digital-art',
             samples: 1,
           }),
         });
