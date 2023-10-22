@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Start from './Start';
 import CloseIcon from '@mui/icons-material/Close';
 import './hoverbutton-gold.css';
-import './BigButtonComponent.module.css';
+import './BigButtonComponent.css';
 
 const BigButtonComponent = () => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);

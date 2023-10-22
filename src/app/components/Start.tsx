@@ -32,7 +32,7 @@ const Start = () => {
     <div className='text'>
     <h3><u><b>League of Legends Patch Notes - Champion Concept Creator</b></u></h3>
         <br/>
-        Greetings, fellow summoners! I'm excited to introduce the new <u><b>AI League of Legends Champion Concept Creator</b></u>. Get ready to embark on a journey of creativity and innovation as you shape your very own champion for the Rift!<br/><br/>
+        Greetings, fellow summoners! I&apos;m excited to introduce the new <u><b>AI League of Legends Champion Concept Creator</b></u>. Get ready to embark on a journey of creativity and innovation as you shape your very own champion for the Rift!<br/><br/>
         📜 Patch Highlights:<br/>
         - Dive into the creative process of champion creation using the power of AI
         <br/>
@@ -41,16 +41,16 @@ const Start = () => {
         <br />
         📖 Patch Notes:
         <br />
-        As a dedicated fan of League of Legends and technology, I'm thrilled to bring you this new tool. It's designed to help you craft your dream champion and breathe life into your unique ideas. 
-        You'll start with a prompt, which asks for tags related to your champion, and with the power of AI using OpenAI's API in conjunction with Stability AI's image generation, the possibilities are endless!<br/> Feel free to explore and unleash your imagination as you design your champion's lore, abilities, and more!
+        As a dedicated fan of League of Legends and technology, I&apos;m thrilled to bring you this new tool. It&apos;s designed to help you craft your dream champion and breathe life into your unique ideas. 
+        You&apos;ll start with a prompt, which asks for tags related to your champion, and with the power of AI using OpenAI&apos;s API in conjunction with Stability AI&apos;s image generation, the possibilities are endless!<br/> Feel free to explore and unleash your imagination as you design your champion&apos;s lore, abilities, and more!
         <br /><br/>
-        🎮 Ready to embark on your creative journey? Let's dive into the world of champion creation and make your mark on the Summoner's Rift. Happy designing!
+        🎮 Ready to embark on your creative journey? Let&apos;s dive into the world of champion creation and make your mark on the Summoner&apos;s Rift. Happy designing!
         <br /><br/>
 
-        <h2>Warning, Summoner! Please be patient as the AI is working tirelessly to bring to life your finest creations. It may take just a bit of time to load, but trust us, it'll be worth the wait!</h2>
+        <h2>Warning, Summoner! Please be patient as the AI is working tirelessly to bring to life your finest creations. It may take just a bit of time to load, but trust us, it&apos;ll be worth the wait!</h2>
     </div>
     <button className="button start-button" onClick={startProcess}>
-      Let's Begin
+      Let&apos;s Begin
       <div className="button__horizontal"></div>
       <div className="button__vertical"></div>
     </button>
