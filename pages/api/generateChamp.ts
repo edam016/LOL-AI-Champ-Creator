@@ -21,11 +21,11 @@ export default async function handler(req: { method: string; body: { textPrompt:
           },
           body: JSON.stringify({
             text_prompts: [{ text: textPrompt }],
-            cfg_scale: 5,
+            cfg_scale: 7,
             height: 1024,
             width: 1024,
             steps: 10,
-            style_preset:'anime',
+            style_preset:'comic-book',
             samples: 1,
           }),
         });
