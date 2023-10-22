@@ -25,7 +25,6 @@
   /* transform: scale(1.1); */
 }
 
-
 .big-window {
   position: flex;
   /* background-color: rgba(17, 17, 17, 0.6); */
@@ -74,4 +73,15 @@
   background-color: #f5f1e6;
   color: #1c2229;
   cursor: pointer;
+}
+
+.animate-button {
+  opacity: 0; /* Initially, the button is invisible */
+  transform: translateY(10px); /* Start position off-screen */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-button.show {
+  opacity: 1; /* When the button is visible, set opacity to 1 */
+  transform: translateY(0); /* Animate to the final position */
 }
