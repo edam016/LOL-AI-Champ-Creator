@@ -21,7 +21,7 @@ export default async function handler(req: { method: string; body: { textPrompt:
           },
           body: JSON.stringify({
             text_prompts: [{ text: textPrompt }],
-            cfg_scale: 6,//works with 6 with private wifi, 5 in public wifi
+            cfg_scale: 5,//works with 6 with private wifi, 5 in public wifi
             height: 1024,
             width: 1024,
             steps: 10,//good with 10
