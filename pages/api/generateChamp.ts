@@ -3,7 +3,7 @@
 export default async function handler(req: { method: string; body: { textPrompt: any; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { data?: any; error?: string; }): void; new(): any; }; }; }) {
     if (req.method === 'POST') {
       try {
-        const engineId = 'stable-diffusion-xl-512-v1-0';
+        const engineId = 'stable-diffusion-xl-1024-v1-0';
         const apiHost = process.env.API_HOST || 'https://api.stability.ai';
         const apiKey = process.env.STABILITY_API_KEY; // Replace with your API key
   
