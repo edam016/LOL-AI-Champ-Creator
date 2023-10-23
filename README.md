@@ -2,6 +2,10 @@
 
 Welcome to the League of Legends Champion Concept Creator, a tool powered by OpenAI's API and a Stability API to generate unique champion concepts for the popular online game, League of Legends.
 
+Demo Video Found Below:
+https://www.youtube.com/watch?v=WziQsROyOtk&ab_channel=EricDam
+
+Application Hosted Below (Image Constraints for Image Generation API due to Vercel Hosting Execution Limits so Picture might not be accurate)
 https://lol-ai-champ-creator.vercel.app/
 
 <img width="1440" alt="Screenshot 2023-10-22 at 12 41 34 AM" src="https://github.com/edam016/LOL-Champ-Creator/assets/36054677/59a93e48-bf53-4db7-9b7b-73deaea71c2e">
