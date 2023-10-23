@@ -39,4 +39,8 @@ This project leverages OpenAI's powerful language model to assist in the creativ
 
 - OpenAI API Key
 - Stability API Key
-- League of Legends knowledge and enthusiasm
+- Optional:League of Legends knowledge and enthusiasm
+
+### Cool Creations 
+
+<img width="1440" alt="Screenshot 2023-10-23 at 6 23 41 PM" src="https://github.com/edam016/LOL-AI-Champ-Creator/assets/36054677/740ff3bf-fd1f-4311-82bc-b4ebc8c1b931">
