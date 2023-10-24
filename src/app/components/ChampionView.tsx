@@ -17,7 +17,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   const sections = result.split('\n\n');
   let [color, setColor] = useState("#b59758");
   const [imageData, setImageData] = useState("");
-
+  const [errorMessage, setErrorMessage] = useState<Error | null>(null);
 
   const abilities = {
     P: sections[1],
@@ -44,6 +44,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
     width: '20%'     
   };
 
+  
   useEffect(() => {
     async function fetchData() {
       try {
@@ -73,6 +74,8 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
         }
       } catch (error) {
         console.error(error);
+        setErrorMessage(error as Error | null);
+        console.log('Error Message:'+errorMessage);
       }
     }
 
@@ -91,6 +94,12 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
 
   return (
     <div>
+      <div >
+        Tags:{resultTags}
+      </div>
+      {errorMessage 
+      ? <span></span> 
+      : <div>{errorMessage}</div>}
       <main>
         {sections.length == 0 ? 
           <MoonLoader
@@ -137,6 +146,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
             </div>
             </div>
         }
+        
       </main>
     </div>
   );

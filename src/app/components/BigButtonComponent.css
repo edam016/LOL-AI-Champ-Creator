@@ -85,3 +85,9 @@
   opacity: 1; /* When the button is visible, set opacity to 1 */
   transform: translateY(0); /* Animate to the final position */
 }
+
+@media screen and (max-width: 450px) {
+  .big-window {
+    margin-top: 14vh; /* or another value that works for your design */
+  }
+}

@@ -4,7 +4,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import './hoverbutton-gold.css';
 import './BigButtonComponent.css';
 
-const BigButtonComponent = () => {
+
+interface BigButtonComponentProps {
+  setIsWindowStatus:(val: React.SetStateAction<boolean>) => void; 
+}
+
+const BigButtonComponent: React.FC<BigButtonComponentProps> = ( {setIsWindowStatus} ) => {
   const [isWindowOpen, setIsWindowOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,10 +27,12 @@ const BigButtonComponent = () => {
 
   const openWindow = () => {
     setIsWindowOpen(true);
+    setIsWindowStatus(true);
   };
 
   const closeWindow = () => {
     setIsWindowOpen(false);
+    setIsWindowStatus(false);
   };
 
   return (

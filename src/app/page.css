@@ -128,3 +128,9 @@ main {
     z-index: 10;
   }
   
+  openPlayer {
+    opacity: 1;
+  }
+  closePlayer {
+    opacity: 0;
+  }
