@@ -18,6 +18,7 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
   let [color, setColor] = useState("#b59758");
   const [imageData, setImageData] = useState("");
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
+  const [status, setStatus] = useState(0);
 
   const abilities = {
     P: sections[1],
@@ -62,7 +63,9 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
       const responseJSON = (await response.json()) as GenerationResponse;
       console.log(responseJSON.data.artifacts[0].base64);
       if (response.status !== 200) {
+        setStatus(response.status);
         throw new Error(`Request failed with status ${response.status}`);
+        
       }
       if (responseJSON && responseJSON.data.artifacts.length > 0) {
         console.log(responseJSON);
@@ -92,11 +95,24 @@ const ChampionView: React.FC<ChampViewProps> = ({ result, resultTags }) => {
     }>
   }
 
+  const statusMessage = (status: number) => {
+    switch(status) {
+      case 400:
+        return 'Unfortunately Summoner, the Stability AI API is currently down. Please check back again later'
+      case 401:
+        return 'Unfortunately Summoner, the Stability AI API is currently down. Please check back again later'
+      case 403:
+        return 'Unfortunately Summoner, the Stability AI API is currently down. Please check back again later'
+      case 404:
+        return 'Unfortunately Summoner, the Stability AI API is currently down. Please check back again later'
+      case 500:
+        return 'Unfortunately Summoner, the Stability AI API is currently down. Please check back again later'
+      default:
+    }
+  }
+
   return (
     <div>
-      <div >
-        Tags:{resultTags}
-      </div>
       {errorMessage 
       ? <span></span> 
       : <div>{errorMessage}</div>}
