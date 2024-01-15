@@ -37,7 +37,7 @@ export default async function (req, res) {
 async function createLeagueOfLegendsChampion(tags) {
   const prompt = generateChampionPrompt(tags);
   const completion = await openai.completions.create({
-    model: "text-davinci-003",
+    model: "gpt-3.5-turbo-instruct",
     prompt,
     temperature: 0.6,
     max_tokens: 400,
